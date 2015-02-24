@@ -1,0 +1,4460 @@
+﻿Legend
+======
+
+Label format:
+
+HW_<category><batch#>{_<subitem#>}
+
+<category>:
+    S - Sample from manufacturer.
+    B - Bad/buggy device.
+    P - Production device.
+    C - Competitor product.
+    I - Integration partner device.
+    R - Reference or development device.
+    Other categories may be introduced when needed.
+
+<batch#>:
+    A 3-digit number of a group of items which arrives as a single
+    batch on a particular date.
+
+<subitem#> (optional, repetitive):
+    Should be specified if a particular item consists of several parts
+    or a number of similar parts, each of which needs to be identified.
+    Such separation may be performed when needed, at a later time.
+
+Example:
+    A player sample with an external power supply is received from a
+    manufacturer. The player is marked as "HW_S100_1" and the PSU is marked
+    as "HW_S100_2". Later a mainboard needs to be umounted, so the mainboard
+    is registered as a separate item and labeled "HW_S100_1_1".
+
+Photos:
+    All registered hardware items should be photographed. Pictures should
+    be stored in "/STORAGE/rushd/HW_LOG". Picture file name should start
+    with "HW_..." id, suffixed with "-1", "-2", etc. for multiple pictures.
+
+Log message types:
+    - Registered.
+    - Taken.
+    - Returned.
+
+---------------------------------------------------------------------------
+
+Log
+===
+
+...........................................................................
+
+Batch: HW_S100
+
+    Received on 2010-06-18 from dkv, who received it from Kenmec factory,
+    Taiwan.
+
+HW_S100_1_1
+
+    External PSU 12V, 3A.
+
+    [mike] 2010-06-18 Registered.
+
+HW_S100_1_2
+
+    Kenmec 8642 mainboard with Sunext chipset.
+
+    [mike] 2010-06-18 Registered.
+
+HW_S100_2_1
+
+    External PSU 12V, 3A.
+
+    [mike] 2010-06-18 Registered.
+
+HW_S100_2_2
+
+    Kenmec 8642 mainboard with Sunext chipset.
+
+    [mike] 2010-06-18 Registered.
+
+HW_S100_3
+
+    Kenmec 8642 mainboard, PSU, FIP; on paperboard.
+
+    [mike] 2010-06-18 Registered.
+
+HW_S100_4
+
+    Kenmec 8642 mainboard, PSU, FIP; on paperboard.
+    ATTENTION: No PSU shield, naked 220V!
+
+    [mike] 2010-06-18 Registered.
+
+    [krylov] 2010-06-28 FIP and Fan control work.
+
+HW_S100_5
+
+    Kenmec 8642 mainboard, PSU, FIP; on paperboard.
+
+    [mike] 2010-06-18 Registered.
+
+    [krylov] 2010-06-28 FIP and Fan control does not work correctly.
+        IR Power button can switch power off but cannot switch power on.
+
+HW_S100_6
+
+    Kenmec Lite case with HDD rack, mainboard mock-up.
+
+    [mike] 2010-06-18 Registered.
+
+HW_S100_7
+
+    Kenmec Lite case with place for FIP.
+
+    [mike] 2010-06-18 Registered.
+
+HW_S100_8
+
+    Kenmec Max case.
+
+    [mike] 2010-06-18 Registered.
+
+...........................................................................
+
+Batch: HW_S101
+
+    Received on 2010-07-02 from dkv.
+
+HW_S101_1
+
+    QiSheng player on 8652 chip (driveless).
+
+    [krylov] 2010-07-02 Registered.
+    [mike] 2010-07-02 taken for soldering UART.
+    [krylov] Taken.
+
+HW_S101_1_1
+
+    Mainboard of HW_S101_1.
+
+    [mike] 2010-08-03 Registered.
+
+HW_S101_1_2
+
+    Case of HW_S101_1.
+
+    [mike] 2010-08-03 Registered.
+
+...........................................................................
+
+Batch: HW_S102
+
+    Received on 2010-07-05 from Boris Khazanov.
+
+HW_S102_1
+
+    Smart H1 (PCBA with 8643 chipset) sample from Kenmec (sent using FedEx
+    to Boris Khazanov, tracking no. 8716 6541 2481).
+
+    [orlov] 2010-07-05 Registered
+    [orlov] 2010-07-05 Taken.
+
+...........................................................................
+
+Batch: HW_S103
+
+    Received on 2010-07-12 from boris (KenMec).
+
+HW_S103_1
+
+    Player boards on 8642 chip (main board and FIP).
+
+    [krylov] 2010-07-12 Registered.
+
+HW_S103_2
+
+    Player board on 8643 chip.
+
+    [krylov] 2010-07-12 Registered.
+
+HW_S103_3
+
+    Player boards on 8642 chip (mainboard, PSU, 7.1, PSU_ext+SD and FIP).
+
+    [krylov] 2010-07-12 Registered.
+
+HW_S103_3_1
+
+    Mainboard from HW_S103_3.
+
+    [mike] 2010-08-03 Registered.
+
+HW_S103_3_2
+
+    FIP from HW_S103_3.
+
+    [mike] 2010-08-03 Registered.
+
+HW_S103_3_3
+
+    PSU_ext+SD board from HW_S103_3.
+
+    [mike] 2010-08-03 Registered.
+
+HW_S103_3_4
+
+    7.1 board from HW_S103_3.
+
+    [mike] 2010-08-03 Registered.
+
+HW_S103_3_5
+
+    PSU from HW_S103_3.
+
+    [mike] 2010-08-03 Registered.
+
+...........................................................................
+
+Batch: HW_S104
+
+    Received on 2010-07-19 from dkv (from Taiwan and China).
+
+HW_S104_1
+
+    Smart D1 player (MB, FIP, case).
+
+    [krylov] 2010-07-19 Registered.
+    [mike] 2010-09-01 Main board replaced with the v2.0.
+
+HW_S104_1_1
+
+    Smart main board v1.0.
+
+HW_S104_2
+
+    Smart H1 player (MB, FIP, case).
+
+    [mike] 2010-07-22 Registered.
+
+HW_S104_3
+
+    Max mainboard.
+
+    [mike] 2010-08-03 Registered.
+    [orlov] 2010-08-20 NAND flash bad blocks discovered: 212, 790, 854,
+        1156, 1327, 1530, 1556, 1699, 1705, 1746, 1764
+
+HW_S104_4
+
+    Max FIP.
+
+    [mike] 2010-08-03 Registered.
+
+...........................................................................
+
+Batch: HW_S105
+
+    Received on 2010-07-30 from Boris (from dkv).
+
+    [mike] 2010-08-03 Registered.
+
+HW_S105_1
+
+    QiSheng 8652 player.
+
+    [mike] 2010-08-03 Registered.
+    [stepan] 2010-08-03 Taken.
+    [stepan] 2010-08-31 Prepared and will be send to Berlin exhibition.
+
+HW_S105_2
+
+    QiSheng 8652 player.
+
+    [mike] 2010-08-03 Registered.
+    [stepan] 2010-08-03 Taken.
+
+HW_S105_3
+
+    QiSheng 8652 player.
+
+    [mike] 2010-08-03 Registered.
+    [stepan] 2010-08-03 Taken.
+    [orlov] 2010-08-09 Given to Chernyahovskogo office.
+
+HW_S105_4
+
+    QiSheng 8652 player.
+
+    [mike] 2010-08-03 Registered.
+
+HW_S105_4_1
+
+    Part of HW_S105_4: Mainboard with FIP and SATA boards and cables.
+
+    [mike] 2010-10-04 Registered.
+
+HW_S105_4_1
+
+    Part of HW_S105_4: Case.
+
+    [mike] 2010-10-04 Registered.
+
+HW_S105_5
+
+    QiSheng 8652 player.
+    NOTE: UART pins on mainboard are soldered and then cut, thus,
+    to connect UART some soldering is needed.
+
+    [mike] 2010-08-03 Registered.
+
+...........................................................................
+
+Batch: HW_S106
+
+    Received on 2010-08-13 from Sedov.
+
+    [alex] 2010-08-13 Registered.
+
+HW_S106_1
+
+    ZWave-USB adapter HomePro ZCU201 (868.42 Mhz).
+
+    [alex] 2010-08-13 Registered.
+
+HW_S106_2
+
+    ZWave power switch Duwi 05437 (868.42 Mhz).
+
+HW_S106_3
+
+    IP Camera Panasonic BL-C131.
+
+    [alex] 2010-08-13 Registered.
+
+...........................................................................
+
+Batch: HW_S107
+
+    Received on 2010-08-18 from Aeroport from Igor from China.
+
+    [alex] 2010-08-20 Registered.
+
+HW_S107_1_1
+
+    ZWave Window / Door Detector TD1110Z1, main part (1/2)
+
+    [alex] 2010-08-20 Registered.
+
+HW_S107_1_2
+
+    ZWave Window / Door Detector, small part (2/2)
+
+    [alex] 2010-08-20 Registered.
+
+HW_S107_2
+
+    ZWave USB stick.
+
+        Vendor=0403 ProdID=6001 Rev= 6.00
+        Manufacturer=FTDI
+        Product=FT232R USB UART
+        SerialNumber=A9009c38
+
+        "ftdi_sio" Linux driver.
+
+        http://www.goodway.com.tw/
+
+    [alex] 2010-08-20 Registered.
+
+...........................................................................
+
+Batch: HW_S108
+
+    Received on 2010-08-20 from Aeroport from USA / 4Home.
+
+    [alex] 2010-08-20 Registered.
+
+HW_S108_1_1
+
+    4Home ZWave Control Point, 12V*1A
+        Model: CP2000K-US
+        Serial: 0810YN400038
+        WAN MAC: 00C0029D7B52
+        Home ID: 004C4C2D
+        Connectors: ETH1, ETH2, USB1, USB2, Power
+        Buttons: Reset, Z-Wave, WPS
+        Indicators: Power, ETH1, ETH2, WiFi, ZWave, USB1, USB2, Service
+
+    [alex] 2010-08-20 Registered.
+
+HW_S108_1_2
+
+    220V-12V adapter "for use with control point", 1A
+
+    [alex] 2010-08-20 Registered.
+
+HW_S108_2
+
+    ZWave Smart Energy Switch
+        Model: DSC06105-ZWUS
+        908.42MHz
+        Aeon Labs LLC
+        Input: AC 125V 15A 60Hz
+        "7-7-10 zwave 5.02p3", "0723"
+
+    [alex] 2010-08-20 Registered.
+
+HW_S108_3
+
+    ZWave Dimmer (Lamp Module)
+        JASCO Products.
+        Model: ZW3101.
+        AC 120V, 60Hz.
+        Max load for Z-Wave outlet: 300W (2.5A).
+        Max load for passthrough outlet: 1500W (12.5A).
+
+    [alex] 2010-08-20 Registered.
+
+HW_S108_4_1
+
+    IP Camera
+        Model: RC8021
+        Serial: 0906YL5006719
+        Server name: SC2D7BD5
+        Input: 5V*1A
+        Ports: Speaker Out, Power, Lan
+        Includes WiFi antenna
+
+    [alex] 2010-08-20 Registered.
+
+HW_S108_4_2
+
+    220V-12V adapter "for use with camera", 1A
+
+...........................................................................
+
+Batch: HW_S109
+
+    Batch for registering old equipment already in the office.
+
+    Introduced by alex on 2010-08-20.
+
+HW_S109_1
+
+    110-220V adapter (110->220, 220->110)
+
+    [alex] 2010-08-20 Registered.
+
+HW_S109_2
+
+    Reference board with SMP8656.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_3
+
+    Player on SMP8654A in white plastic case.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_4_1
+
+    QiSheng player in pink case.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_4_2
+
+    Power adapter for QiSheng player, 12V 3A.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_4_3
+
+    IR Remote for QiSheng player.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_5_1
+
+    Power adapter 12V 3A.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_6
+
+    IR Remote (light gray) in Chinese.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_7
+
+    Wireless Remote for PS3.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_8
+
+    IR Remote for Samsung TV.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_9
+
+    Wireless mini keyboard with touchpad.
+
+    [mike] 2010-08-26 Registered.
+
+HW_S109_10
+
+    Smart main board v2.0.
+
+...........................................................................
+
+Batch: HW_S110
+
+    USB Wi-Fi adapter samples for QiSheng models.
+
+HW_S110_1_n, n=1..5
+
+    Topmay RMNTLAN013, in large white case with external antenna connector.
+
+    [mike] 2010-08-30 Registered.
+
+HW_S110_2_n, n=1..5
+
+    External antenna for Topmay RMNTLAN013.
+
+    [mike] 2010-08-30 Registered.
+
+HW_S110_3_n, n=1..5
+
+    Topmay RMNTLAN012, in small black case with internal antenna.
+
+    [mike] 2010-08-30 Registered.
+
+HW_S110_4_n, n=1..5
+
+    Ogemray GWF-3A with external antenna connector.
+
+    [mike] 2010-08-30 Registered.
+
+HW_S110_5_n, n=1..4
+
+    Ogemray GWF-3A with internal antenna.
+
+    [mike] 2010-08-30 Registered.
+
+HW_S110_6_n, n=1..5
+
+    Ogemray GWF-3C with external antenna connector.
+
+    [mike] 2010-08-30 Registered.
+
+HW_S110_7_n, n=1..5
+
+    Ogemray GWF-3C with internal antenna.
+
+    [mike] 2010-08-30 Registered.
+
+...........................................................................
+
+Batch HW_S111
+
+    Received on 2010-08-30 from Aeroflot from HK. Brought my Sascha.
+
+HW_S111_1_1
+
+    Max PPR sample, full set.
+
+    [orlov] 2010-08-31 Registered.
+
+...........................................................................
+
+Batch HW_S112
+
+    Registered on 2010-09-08. DVB-S extension boards.
+
+HW_S112_1_1
+
+    DVB-S extension board, CI slot, USB connector pinout manually fixed by
+    rib, no plastic skirt for USB connector.
+    Chipset: Montage M88DS3002/M88TS2020.
+    Marks: RS6001 V1.0 2010_07_30.
+
+    [mike] USB connector pinout fixed by rib.
+    [krylov] 2010-09-08 registered. Tested on Max sample A.
+       It cannot be detected by linux (/sys pseudo fs)
+    [mike] 2010-12-27 Given to rib.
+    [mike] Returned by rib.
+
+HW_S112_2_1
+
+    DVB-S extension board, 2 tuners, USB connector layout manually fixed by
+    rib, no plastic skirt for USB connector.
+    Chipset: Montage M88DS3002/M88TS2020.
+    Marks: RS3632 V1.0 2010_07_15.
+
+    [mike] USB connector pinout fixed by rib.
+    [krylov] 2010-09-08 registered. Tested on Max sample A.
+       It does not detected by linux (/sys pseudo fs)
+    [mike] 2010-12-27 Given to rib.
+    [mike] Returned by rib.
+    [mike] Second tuner section (the centermost antenna connector) seems
+    not working.
+
+...........................................................................
+
+Batch: HW_S113
+
+    Received from China.
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_1_n, n=1..2
+
+    ZWave Screw-in On/Off Module
+        Model: AN145-1
+        908.42MHz
+        Everspring IND. CO., LTD
+        Input: AC 120V 60Hz
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_2_n, n=1..2
+
+    ZWave Indoor Siren
+        Model: SE812-2
+        908.42MHz
+        Everspring IND. CO., LTD
+        Input: 1.5V C * 4
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_3
+
+    ZWave Power Monitor
+        Model: TD1020Z1
+        908.42MHz
+        Input: AC 110V-120V 60Hz 15A
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_4_n, n=1..2
+
+    ZWave Power Monitor
+        Model: TD1021Z1
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_5
+
+    ZWave Motion Detector
+        Model: SP814-1
+        868.42MHz
+        Everspring IND. CO., LTD
+        Input: 1.5V AA * 3
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_6
+
+    ZWave Motion Detector
+        Model: SP814-2
+        908.42MHz
+        Everspring IND. CO., LTD
+        Input: 1.5V AA * 3
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_7_n, n=1..2
+
+    ZWave Flood Detector
+        Model: ST812-2
+        908.42MHz
+        Everspring IND. CO., LTD
+        Input: 1.5V AA * 3
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_8_n, n=1..2
+
+    ZWave Illumination Sensor with LCD
+        Model: ST815-2
+        908.42MHz
+        Everspring IND. CO., LTD
+        Input: 1.5V AA * 3
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_9_n, n=1..2
+
+    ZWave Temperature/Humidity Detector
+        Model: ST814-2
+        908.42MHz
+        Everspring IND. CO., LTD
+        Input: 1.5V AA * 3
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_10
+
+    ZWave Lamp Module
+        Model: AD126-1
+        908.42MHz
+        Everspring IND. CO., LTD
+        Input: AC 120V 60Hz
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_11
+
+    ZWave Door/Window Detector
+        Model: SM103
+        908.42MHz
+        Everspring IND. CO., LTD
+        Input: 1.5V AAA * 3
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_12
+
+    ZWave Window/Door Detector
+        Model: TD1110Z1
+        Input: 1.5V AAA * 2
+
+    [msg] 2010-09-10 Registered.
+
+HW_S113_13_n, n=1..5
+
+    ZWave USB stick US
+
+        Vendor=0403 ProdID=6001
+        Manufacturer=FTDI
+        Product=FT232R USB UART
+
+        "ftdi_sio" Linux driver.
+
+    [msg] 2010-09-13 Registered.
+
+HW_S113_14_n, n=1..3
+
+    ZWave USB stick US
+
+        Vendor=067b ProdID=2303
+        Manufacturer=Prolific Technology Inc.
+        Product=USB-Serial Controller D
+
+        "pl2303" Linux driver.
+
+    [msg] 2010-09-13 Registered.
+
+...........................................................................
+
+Batch: HW_S114
+
+HW_S114_1_n, n=1..3
+
+    Dune USB DVB-T stick
+
+    VendorId=10b8 ProductId=1e80
+    Chipset=DiBcom
+
+    [krylov] 2010-09-30 Registered.
+    [krylov] put into dvb-t stick box on my shelf.
+
+HW_S114_1_n, n=4..8
+
+    Antenna of Dune USB DVB-T stick
+
+    [krylov] 2010-09-30 Registered.
+
+...........................................................................
+
+Batch: HW_S115
+
+    Received from China.
+
+HW_S115_1_1
+
+    Dune HD Lite (QiSheng) mainboard together with:
+    - Front panel board.
+    - USB Wi-Fi card.
+    - Wi-Fi internal antenna with cable.
+    - SATA cable (10 cm).
+    - 4-pin power cable.
+    - 5-pin front panel cable.
+
+    [mike] 2010-10-01 Registered.
+    [mike] 2010-10-04 MCU flashed: HDI_Smart_100818_patched_by_mike.
+
+HW_S115_1_2
+
+    Dune HD Lite (QiSheng) mainboard together with:
+    - Front panel board.
+    - USB Wi-Fi card.
+    - Wi-Fi internal antenna with cable.
+    - SATA cable (10 cm).
+    - 4-pin power cable.
+    - 5-pin front panel cable.
+
+    [mike] 2010-10-01 Registered.
+    [mike] 2010-10-01 MCU flashed: HDI_Smart_100818_patched_by_mike.
+    [mike] 2010-10-01 Back side USB seems not working.
+    [mike] 2010-10-01 MCU testing:
+     - LED control with GPIO9: Works, but the LED is on during normal operation.
+     - Power off with GPIO3: Does not work.
+    [mike] 2010-10-16 All hw bugs fixed. Left in China to Ogemray for Wi-Fi experiments.
+
+HW_S115_1_3
+
+    Dune HD Lite (QiSheng) mainboard together with:
+    - Front panel board.
+    - USB Wi-Fi card.
+    - Wi-Fi internal antenna with cable.
+    - SATA cable (10 cm).
+    - 4-pin power cable.
+    - 5-pin front panel cable.
+
+    [mike] 2010-10-01 Registered.
+    [mike] 2010-10-04 MCU cannot be flashed (the programmer doesn't see it).
+    [mike] 2010-10-04 Power-on jumper soldered.
+
+HW_S115_1_4
+
+    Dune HD Lite (QiSheng) mainboard together with:
+    - Front panel board.
+    - USB Wi-Fi card.
+    - Wi-Fi internal antenna with cable.
+    - SATA cable (10 cm).
+    - 4-pin power cable.
+    - 5-pin front panel cable.
+
+    [mike] 2010-10-01 Registered.
+    [mike] 2010-10-01 MCU flashed: HDI_Smart_100818_patched_by_mike.
+    [mike] 2010-10-01 MCU testing:
+     - LED control with GPIO9: Works, but the LED is on during normal operation.
+     - Power off with GPIO3: Does not work.
+
+    [mike] 2011-06-24 Ethernet chip unsoldered.
+
+HW_S115_1_5
+
+    Dune HD Lite (QiSheng) mainboard together with:
+    - Front panel board.
+    - USB Wi-Fi card.
+    - Wi-Fi internal antenna with cable.
+    - SATA cable (10 cm).
+    - 4-pin power cable.
+    - 5-pin front panel cable.
+
+    [mike] 2010-10-01 Registered.
+    [mike] 2010-10-01 Power-on jumper soldered.
+    [mike] 2010-10-01 MCU flashed: HDI_Smart_100818_patched_by_mike.
+    [mike] 2010-10-01 FIP (IR, LED, Power button) does not work.
+
+HW_S115_2_1
+HW_S115_2_2
+
+    Dune HD Lite (QiSheng) SATA board.
+
+    [mike] 2010-10-01 Registered.
+
+HW_S115_3
+
+    Power adapter 12V from QiSheng.
+
+...........................................................................
+
+Batch: HW_S116
+
+    Received from China 27.10.2010, brought by Sasha.
+
+HW_S116_1_1
+
+    Dune HD Lite.
+    Original fw: "100910_2200_test".
+    [mike] 2010-10-27 Registered.
+    [mike] 2010-10-27 Front panel USB port does not work.
+    [mike] 2010-10-27 Front panel mirror near power button is installed
+       badly.
+    Fw installed: "101022_2323_test".
+
+    Anton fix composite video output.
+
+HW_S116_1_2
+
+    Dune HD Lite.
+    Original fw: "101022_2323_test".
+    Original MCU fw: power is always on.
+    [mike] 2010-10-27 Registered.
+    [mike] 2010-10-27 Flashed correct MCU.
+    [mike] 2010-10-27 Power jumper removed.
+    [mike] 2010-10-27 Tested: MCU use cases work correctly.
+    [mike] 2010-11-22 Given to rib.
+
+HW_S116_1_3
+
+    Dune HD Lite.
+    Original fw: "101022_2323_test".
+    [mike] 2010-10-27 Registered.
+    [mike] 2010-10-27 Flashed correct MCU.
+    [mike] 2010-10-27 Power jumper removed.
+    [mike] 2010-10-27 FIP Power button does not work at all,
+       other MCU aspects seem to work correctly.
+
+HW_S116_1_4
+
+    Dune HD Lite.
+    S/N: 282A-3CB1-0A27-74A0-06B7-0884-11BF-4093
+    Original fw: "101022_2323_test".
+    [mike] 2010-10-27 Registered.
+    [mike] 2010-10-27 Flashed correct MCU.
+    [mike] 2010-10-27 Power jumper removed.
+    [mike] 2010-10-27 Tested: MCU use cases work correctly.
+    [orlov] 2010-10-29 Goes to Kartina.
+
+HW_S116_1_5
+
+    Dune HD Lite.
+    S/N: F834-15CC-BB52-10EA-EF32-2084-8E9A-FF19
+    Original fw: "100910_2200_test".
+    [mike] 2010-10-27 Registered.
+    [mike] 2010-10-27 Flashed correct MCU.
+    ToDo: Reflash SMP fw.
+    [orlov] 2010-10-29 Goes to Kartina.
+
+HW_S116_1_6
+
+    Dune HD Lite.
+    S/N: 65B5-B653-C851-A216-A3C4-9F1C-97E2-2826
+    Original fw: "101022_2323_test".
+    [mike] 2010-10-27 Registered.
+    [mike] 2010-10-27 Flashed correct MCU.
+    [mike] 2010-10-27 Power jumper removed.
+    [mike] 2010-10-27 Tested: MCU use cases work correctly.
+    [orlov] 2010-10-29 Goes to Kartina.
+
+HW_S116_1_7
+
+    Dune HD Lite.
+    S/N: 22B2-CCB7-5193-A810-BF6E-37C4-5674-DDD5
+    Original fw: "101022_2323_test".
+    [mike] 2010-10-27 Registered.
+    [mike] 2010-10-27 Flashed correct MCU.
+    [mike] 2010-10-27 Power jumper removed.
+    [mike] 2010-10-27 Tested: MCU use cases work correctly.
+    [orlov] 2010-10-29 Goes to Kartina.
+
+HW_S116_1_8
+
+    Dune HD Lite.
+    Original fw: "101022_2323_test".
+    [mike] 2010-10-27 Registered.
+    [mike] 2010-10-27 Flashed correct MCU.
+    [mike] 2010-10-27 Power jumper removed.
+    [mike] 2010-10-27 Tested: MCU use cases work correctly.
+    [orlov] 2010-11-09 Goes with Kostya to Saint-Petersburg.
+    [orlov] 2010-11-13 Returns back.
+    [orlov] 2010-11-26 Bug found: bad "R" audio connector
+
+HW_S116_1_9
+
+    Dune HD Lite.
+    S/N: 0C08-9016-FC97-C13F-159B-E25E-800F-6469
+    Original fw: "101022_2323_test".
+    [mike] 2010-10-27 Registered.
+    [mike] 2010-10-27 Flashed correct MCU.
+    [mike] 2010-10-27 Power jumper removed.
+    [mike] 2010-10-27 Tested: MCU use cases work correctly.
+    [orlov] 2010-10-29 Goes to Kartina.
+
+...........................................................................
+
+Batch: HW_S117
+
+    Received from China 2010-11-21, brought by Igor 2010-11-22.
+
+HW_S117_1_1
+
+    Dune HD Lite FIP board with red LED, high brightness.
+    [mike] 2010-11-22 Registered.
+
+HW_S117_1_2
+
+    Dune HD Lite FIP board with red LED, low brightness.
+    [mike] 2010-11-22 Registered.
+    [mike] 2010-11-22 The brightness looks about the same as Dune HD Smart.
+
+HW_S117_2_1_1
+
+    Power adaptor 12V 2A with 3 changeable plugs (EU marked as Korean, UK, Chinese).
+    The manufacturer is not specified.
+    [mike] 2010-11-22 Registered.
+    [mike] 2010-11-22 Given to rib.
+    [serge] 2012-01-20 Returned to office.
+
+HW_S117_2_1_2
+
+    Changeable plug for HW_S117_2_1_1, EU marked as Korean.
+    [mike] 2010-11-22 Registered.
+
+HW_S117_2_1_3
+
+    Changeable plug for HW_S117_2_1_1, Chinese.
+    [mike] 2010-11-22 Registered.
+
+HW_S117_2_1_4
+
+    Changeable plug for HW_S117_2_1_1, UK.
+    [mike] 2010-11-22 Registered.
+
+HW_S117_2_2_1
+HW_S117_2_2_2
+HW_S117_2_2_3
+
+    Power adaptor 12V 2.5A, HonKwang, with changeable plugs (Japanese, US).
+    [mike] 2010-11-22 Registered.
+
+HW_S117_2_2_4
+
+    Power adaptor 12V 2.5A, HonKwang, with changeable plugs (Japanese, US).
+    [mike] 2010-11-22 Registered.
+
+HW_S117_2_2_5
+
+    Power adaptor 12V 2.5A, HonKwang, with changeable plugs (Japanese, US).
+    [mike] 2010-11-22 Registered.
+    [mike] 2010-11-22 Given to rib.
+    [serge] 2012-01-20 Returned to the office.
+
+HW_S117_2_2_6
+
+    Power adaptor 12V 2.5A, HonKwang, with changeable plugs (Japanese, US).
+    [mike] 2010-11-22 Registered.
+
+HW_S117_2_3_1
+
+    Power adaptor 12V 2.5A, iHome, with US plug.
+    [mike] 2010-11-22 Registered.
+
+HW_S117_2_3_2
+
+    Power adaptor 12V 2.5A, iHome, with US plug.
+    [mike] 2010-11-22 Registered.
+    [mike] 2010-11-22 Given to rib.
+    [serge] 2012-01-20 Returned to the office.
+
+...........................................................................
+
+Batch: HW_S118
+
+    Received from dkv on 2010-11-25 by mike.
+
+HW_S118_1_1 [jpg]
+
+    Wireless keyboard sample.
+    [mike] 2010-11-25 Registered.
+
+HW_S118_1_2 [jpg]
+
+    Wireless keyboard USB adapter for HW_S118_1_1.
+    [mike] 2010-11-25 Registered.
+
+HW_S118_2 [jpg]
+
+    Wireless keyboard (rubber) mechanical sample.
+    [mike] 2010-11-25 Registered.
+
+HW_S118_3 [jpg]
+
+    Wireless keyboard USB adapter (small).
+    [mike] 2010-11-25 Registered.
+
+...........................................................................
+
+Batch: HW_S119
+
+    Received from volkov on 2010-11-25 by mike.
+
+HW_S119_1
+
+    Dune HD Duo sample from Kentec.
+    [mike] 2010-11-25 Registered.
+
+...........................................................................
+
+Batch: HW_P120
+
+    Received from orekhov on 2010-11-25 by mike.
+    Mass-production Smart series devices.
+
+HW_P120_1_1
+
+    Dune HD Smart D1.
+    [mike] 2010-11-25 Registered.
+    [mike] 2010-11-25 Given to mike.
+
+HW_P120_1_n, n=2..4
+
+    Dune HD Smart D1.
+    [mike] 2010-11-25 Registered.
+
+    HW_P120_1_4: alex -> igor -> some presentation (27-nov-2010).
+
+HW_P120_2_n, n=1..4
+
+    Dune HD Smart B1.
+    [mike] 2010-11-25 Registered.
+
+HW_P120_3_1
+
+    Dune HD Smart BE.
+    [mike] 2010-11-25 Registered.
+    [mike] 2010-11-25 Given to mike.
+
+HW_P120_3_n, n=2..3
+
+    Dune HD Smart BE.
+    [mike] 2010-11-25 Registered.
+
+HW_P120_4_n, n=1..3
+
+    Dune HD Smart HE.
+    [mike] 2010-11-25 Registered.
+
+HW_P120_5_n, n=1..3
+
+    Dune HD Smart ME.
+    [mike] 2010-11-25 Registered.
+
+HW_P120_5_1
+    Sent to GS.
+...........................................................................
+
+Batch: HW_S121, HW_S122, HW_C123, HW_C124, HW_C125.
+
+    Received on 2010-12-07.
+
+HW_S121_1_n, n=1..3
+
+    Dune Remote Control with transparent buttons. Silkscreen the same as
+    the Dune HD Smart RC.
+
+HW_S121_2_n, n=1..2
+
+    Dune Remote Control with transparent buttons. Silkscreen is absent.
+    Buttons shape and location is _not_ the same as for Dune HD Smart RC.
+
+HW_S122_1
+
+    Marvell player prototype a-la High-End.
+
+HW_S122_2
+
+    Remote Control for the Marvell player prototype HW_S122_1.
+
+HW_C123_1
+
+    Mod Systems GP-1000 player "Green Play", white case.
+
+HW_C123_2
+
+    Power adaptor for the Mod Systems GP-1000 player HW_C123_1.
+
+HW_C123_3
+
+    Remote control for the Mod Systems GP-1000 player HW_C123_1.
+
+HW_C123_4
+
+    SanDisk 8G SD card bundled with the Mod Systems GP-1000 player HW_C123_1.
+
+HW_C124_1
+
+    WD TV Live player.
+
+    krylov: i take it to home.
+
+HW_C124_2
+
+    Power adaptor for the WD TV Live player HW_C124_1.
+
+HW_C124_3
+
+    Remote control for WD TV Live player HW_C124_1.
+
+HW_C125_1
+
+    Apple TV player.
+
+HW_C125_2
+
+    Remote control for the Apple TV player HW_C125_1.
+
+HW_C125_3
+
+    Power cord with the US plug for the Apple TV player HW_C125_1.
+
+HW_C126_1
+
+    Samsung BD-C6500 Blu-ray player.
+
+HW_C126_2
+
+    Remote control for the Samsung BD-C6500 Blu-ray player HW_C126_1.
+
+...........................................................................
+
+Batch: HW_S127.
+
+    Received on 2010-12-20.
+
+HW_S127_1_n, n=1..2
+
+    Ethernet-by-AC-power adaptor, US plug.
+    [mike] 2010-12-20 Registered.
+    [orlov] 2011-02-18 Both adapters go to Chernyahovskogo
+
+HW_S127_2_n, n=1..2
+
+    Ethernet-by-AC-power adaptor, EU (Japanese) plug.
+    [mike] 2010-12-20 Registered.
+    [orlov] 2011-02-18 Both adapters go to Chernyahovskogo
+
+HW_S127_3_1
+
+    Dune HD Lite sample with Wi-Fi and Wi-Fi antenna.
+
+HW_S127_3_2
+
+    Dune HD Lite sample without Wi-Fi.
+
+HW_S127_4_n, n=1..2
+
+    Hon-Kwang power adaptor for Dune HD Lite, 12V 2A.
+
+HW_S127_5_n, n=1..2
+
+    Changeable US plug for Hon-Kwang power adaptor.
+
+HW_S127_6_n, n=1..2
+
+    Changeable EU (Japanese) plug for Hon-Kwang power adaptor.
+
+...........................................................................
+
+Batch: 128.
+
+    Received on 2010-12-27 from rib.
+
+HW_S128_1
+
+    DVBS-CAM board with USB rack connector fix by rib.
+
+    Sent to GS.
+
+HW_S128_2
+
+    DVB-S extension board by GeniaTech.
+    2 tuners, USB connector manually fixed by rib.
+    Chipset: Montage M88DS3002/M88TS2020.
+    Marks: RS3623 2010_07_15.
+
+HW_S128_3
+
+    Dune HD Max with USB cable for the rack fixed by rib.
+
+    Sent to GS.
+
+HW_P128_1_1
+
+    Dune HD Lite "KTV" version, 1st MP batch.
+
+HW_P128_1_2
+
+    Power adaptor for HW_P128_1_1.
+
+HW_P128_1_3
+
+    IR remote control for HW_P128_1_1.
+
+HW_P128_2_1
+
+    Dune HD Lite "HDI" version, 1st MP batch.
+
+HW_P128_2_2
+
+    Power adaptor for HW_P128_2_1.
+
+HW_P128_2_3
+
+    IR remote control for HW_P128_2_1.
+
+.........................................................................
+
+Batch: HW_S129
+
+    USB Wi-Fi adapter samples from China. With boards look like HW_S110
+
+HW_S129_1_1
+
+    [krylov] 2011-01-17 Registered.
+
+HW_S129_1_2
+
+    [krylov] 2011-01-17 Registered.
+    [mike] 2011-12-05 Taken to Chernyakhovskogo.
+    [mike] 2011-12-12 Returned to the office.
+
+HW_S129_2_1
+
+    [krylov] 2011-01-17 Registered.
+
+HW_S129_2_2
+
+    [krylov] 2011-01-17 Registered.
+    [mike] 2011-12-05 Taken to Chernyakhovskogo.
+    [mike] 2011-12-12 Returned to the office.
+
+
+HW_S129_3_n, n=1..2
+
+    With external antenna.
+
+    [krylov] 2011-01-17 Registered.
+
+.........................................................................
+
+Batch: HW_S130
+
+    Received 2011-01-23 from HK (via Izvekov).
+
+HW_S130_1
+
+    Wireless keyboard USB adapter for HW_S130_2.
+
+HW_S130_2
+
+    Dune Qwerty wireless keyboard, International layout.
+
+HW_S130_3
+
+    Dune HD Smart H1 with fan at the bottom.
+
+.........................................................................
+
+Batch: HW_S131
+
+    Received 2011-02-04 via Izvekov.
+
+HW_S131_1_1
+
+    DVB-S extension boards.
+
+    [krylov] 2011-02-04 Registered.
+
+HW_S131_1_2
+
+    DVB-S extension board by GeniaTech, 2 tuners, plastic skirt on the
+    USB connector.
+    Chipset: Montage M88DS3002/M88TS2020.
+    Marks: RS6002 V1.1 2010_12_24.
+
+    [krylov] 2011-02-04 Registered.
+
+HW_S131_1_3
+
+    DVB-S extension boards by GeniaTech, CI slot, plastic skirt on the
+    USB connector.
+    Chipset: Montage M88DS3002/M88TS2020.
+    Marks: RS6002 V1.1 2010_12_24.
+
+    [krylov] 2011-02-04 Registered.
+    [mike] Soldered a wire to the DS3000 V_SEL pin.
+
+HW_S131_1_4
+
+    DVB-S extension boards.
+
+    [krylov] 2011-02-04 Registered.
+
+HW_S131_2
+
+    Dune Remote control unit.
+
+    [krylov] 2011-02-04 Registered.
+
+HW_S131_3_1
+HW_S131_3_2
+
+    Externel power supply.
+
+    [krylov] 2011-02-04 Registered.
+
+.........................................................................
+
+Batch: HW_B132
+
+    Received 2011-02 from Izvekov.
+
+HW_B132_1
+
+    RMA from a Moscow customer with the auto-power-off problem.
+    Description given by the customer:
+    <<
+     Один раз примерно в трое суток выходит из режима standby в режим
+     power-off, либо при включении света, либо самопроизвольно.
+     Люстра с энергосберегающими лампами.
+    >>
+    asviridov@mail.ru (?)
+
+    [mike] 2011-03-04 Registered.
+
+.........................................................................
+
+Batch: HW_P133
+
+    Received 2011-02/03 by mike from Chernyakhovskogo Sklad.
+
+HW_P133_1_1
+HW_P133_1_2
+HW_P133_1_3
+
+    Dune HD Lite 53D, MP.
+
+    [orlov] 2011-05-30 HW_P133_1_3 is given to MediaAlliance.
+
+HW_P133_2
+
+    Dune HD Max, MP.
+
+HW_P133_3
+
+    Dune HD Duo, MP.
+
+.........................................................................
+
+Batch: HW_P134
+
+    Received 2011-04-01 by orlov from Chernyakhovskogo Sklad.
+
+HW_P134_1_1/2/3
+
+    Dune HD Lite 53D, MP.
+
+    [orlov] 2011-05-30 HW_P134_1_3 is given to MediaAliance
+
+HW_P134_1_2
+
+    [alex] 2011-05-20 Given to alik.
+
+.........................................................................
+
+Batch: HW_I135
+
+    Received 2011-04-01 from Izvekov.
+
+HW_I135_1_1
+
+    Elecard iTelec STB 820 v.25.
+
+    [serge] 2011-04-06 Registered.
+
+HW_I135_1_2
+
+    Externel power supply from Elecard iTelec STB 820 v.25.
+
+    [serge] 2011-04-06 Registered.
+
+HW_I135_1_3
+
+    Remote Control from Elecard iTelec STB 820 v.25.
+
+    [serge] 2011-04-06 Registered.
+
+..........................................................................
+
+Batch: HW_S136
+
+    Received from Izvekov on 2011-04-06.
+
+HW_S136_1_1_1 [jpg]
+
+    Wireless keyboard, International layout.
+
+    [serge] 2011-04-06 Registered.
+    [mike] 2011-04-25 Taken by mike.
+
+HW_S136_1_1_2 [jpg]
+
+    Wireless keyboard, International layout.
+
+    [serge] 2011-04-06 Registered.
+
+HW_S136_1_2_n, n=1,2. [jpg]
+
+    Wireless keyboard USB adapter for HW_S136_1_1_n.
+
+    [serge] 2011-04-06 Registered.
+
+HW_S136_1_3
+
+    Dune HD Lite, KTV version with new RAM H5PS1G63EFR.
+
+HW_S136_1_4
+
+    Remote Control for Dune HD Lite, fluorescent buttons.
+
+    [serge] 2011-04-06 Registered.
+
+HW_S136_1_5
+
+    Remote Control from Dune HD Lite, fluorescent buttons, no silkscreen.
+
+    [serge] 2011-04-06 Registered.
+
+..........................................................................
+
+Batch: HW_C137
+
+HW_C137_1_1
+
+    BBK HD Media Player NP102S.
+
+    [serge] 2011-04-07 Registered.
+
+HW_C137_1_2
+
+    Remote Control for BBK HD Media Player NP102S.
+
+    [serge] 2011-04-07 Registered.
+
+..........................................................................
+
+Batch HW_S138
+
+HW_S138_1_1
+
+    Hualu Blu-ray player.
+
+    [serge] 2011-04-07 Registered.
+
+..........................................................................
+
+Batch HW_C139
+
+HW_C139_1_1
+
+    HD media player WD TV Live Plus.
+
+    [serge] 2011-04-07 Registered.
+
+HW_C139_1_2
+
+    Remote Control for HD media player WD TV Live Plus.
+
+    [serge] 2011-04-07 Registered.
+
+HW_139_1_3
+
+    External power supply for HD media player WD TV Live Plus.
+
+    [serge] 2011-04-07 Registered.
+
+..........................................................................
+
+Batch HW_P140
+
+HW_P140_1_1
+
+    Dune HD Smart H1.
+
+    [serge] 2011-04-11 Registered.
+
+..........................................................................
+
+Batch HW_P141
+
+HW_P141_1_1
+
+    Dune HD Smart H1.
+
+    [serge] 2011-04-11 Registered.
+
+..........................................................................
+
+Batch HW_B142
+
+HW_B142_1_1
+
+    Dune HD Max mainboard v1.0.
+
+    Reported to have USB problems
+
+    [serge] 2011-04-11 Registered.
+
+HW_B142_1_2
+
+    Dune HD Max mainboard v1.0.
+
+    Reported to have USB problems.
+
+    [serge] 2011-04-11 Registered.
+
+HW_B142_1_3
+
+    Dune HD Max mainboard v1.0.
+
+    Reported to have USB problems.
+
+    [serge] 2011-04-11 Registered.
+
+HW_B142_1_4
+
+    Dune HD Max mainboard v1.0.
+
+    Reported to have USB problems.
+
+    [serge] 2011-04-11 Registered.
+
+HW_B142_1_5
+
+    Dune HD Max mainboard v1.0.
+
+    Reported to have USB problems.
+
+    [serge] 2011-04-11 Registered.
+
+..........................................................................
+
+Batch HW_P144
+
+HW_P144_1
+
+    Dune HD Duo.
+
+    [serge] 2011-04-12 Registered.
+
+..........................................................................
+
+Batch HW_P145
+
+      Received from rib.
+
+HW_P145_1_n, n=1..4.
+
+      Dune HD Max/Duo PSU.
+
+      [serge] 2011-04-25 Registered.
+
+..........................................................................
+
+Batch HW_C146
+
+HW_C146_1_1
+
+      Roku XD Streaming player.
+
+      [serge] 2011-04-25 Registered.
+
+HW_C146_1_2
+
+      Power adapter from Roku XD Streaming player.
+
+      [serge] 2011-04-25 Registered.
+
+HW_C146_1_3
+
+      Remote Control from Roku XD Streaming player HW_C146_1_2.
+
+      [serge] 2011-04-25 Registered.
+
+..........................................................................
+
+Batch_S147
+
+HW_S147_1_1
+
+      Dune Qwerty wireless keyboard, Russian layout.
+      Confirmed for MP.
+
+      [serge] 2011-04-25 Registered.
+
+HW_S147_1_2
+
+      Wireless keyboard USB adapter for HW_S147_1_1.
+      Confirmed for MP.
+
+      [serge] 2011-04-25 Registered.
+
+..........................................................................
+
+Batch HW_S148
+
+HW_S148_1
+
+    Hualu IPTV player mainboard, SMP8652.
+
+    [mike] 2011-04-12 Registered.
+
+HW_S148_2
+
+    Hualu IPTV player mainboard, SMP8652.
+
+    [mike] 2011-04-12 Registered.
+
+..........................................................................
+
+Batch HW_C149
+
+    Bought (retail) by serge on 2011-05-12.
+
+HW_C149_1
+
+    Media player TViX-HD N-1.
+
+    [serge] 2011-05-12 Registered.
+
+HW_C149_2
+
+    Power adapter from TViX-HD N-1.
+
+    [serge] 2011-05-12 Registered.
+
+HW_C149_3
+
+    Remote Control from TViX-HD N-1.
+
+    [serge] 2011-05-12 Registered.
+
+..........................................................................
+
+Batch HW_C150
+
+    Bought (retail) by serge on 2011-05-17.
+
+HW_C150_1
+
+    D-Link IPTV STB DIB-120.
+
+    [serge] 2011-05-18 Registered.
+
+HW_C150_2
+
+    Power adapter from DIB-120.
+
+    [serge] 2011-05-18 Registered.
+
+HW_C150_3
+
+    Remote Control from DIB-120.
+
+    [serge] 2011-05-18 Registered.
+
+..........................................................................
+
+Batch HW_P151
+
+    Received from alex on 2011-06-02.
+
+HW_P151_1
+
+    MP Dune HD Lite 53D.
+
+    [serge] 2011-06-02 Registered.
+
+HW_P151_2
+
+    MP Dune HD Lite 53D.
+
+    [serge] 2011-06-02 Registered.
+
+..........................................................................
+
+Batch HW_S152
+
+    Received from Chernyakhovskogo on 2011-06-06.
+
+HW_S152_1_1
+
+    Dune IPTV Small (the bigger one of IPTV family) player, SMP8670.
+
+    [serge] 2011-06-06 Registered.
+
+HW_S152_1_2
+
+    UART for Dune IPTV Small (HW_S152_1_1).
+
+    [serge] 2011-06-06 Registered.
+
+HW_S152_2_1
+
+    Dune IPTV Micro (the smaller one of IPTV family) player, SMP8670.
+    ATTENTION: Powered by +5V, but has our typical power connector.
+
+    [serge] 2011-06-06 Registered.
+
+HW_S152_2_2
+
+    Power adaptor +5V for Dune IPTV Micro (HW_S152_2_1).
+    ATTENTION: Provides +5V, but has our typical power connector.
+
+    [serge] 2011-06-06 Registered.
+
+..........................................................................
+
+Batch HW_I153
+
+    Received by FedEx 2011-06-06.
+
+HW_I153_1
+
+    FyreTV IPTV STB HS6020W media player.
+
+    [serge] 2011-06-06 Registered.
+
+HW_I153_2
+
+    Remote control for FyreTV IPTV STB HS6020W media player (HW_I153_1).
+
+    [serge] 2011-06-06 Registered.
+
+HW_I153_3
+
+    Power adaptor for FyreTV IPTV STB HS6020W media player (HW_I153_1).
+
+    [serge] 2011-06-06 Registered.
+
+..........................................................................
+
+Batch HW_S154 TODO serge: Rename to HW_R154.
+
+    Received by FedEx 2011-06-06.
+
+HW_S154_1
+
+    Reference board on SMP8670.
+
+    [serge] 2011-06-06 Registered.
+
+HW_S154_2
+
+    Remote control for reference board on SMP8670 (HW_S154_1).
+
+    [serge] 2011-06-06 Registered.
+
+HW_S154_3
+
+    Power adaptor for reference board on SMP8670 (HW_S_154_1).
+
+    [serge] 2011-06-06 Registered.
+
+..........................................................................
+
+Batch HW_C155
+
+    Received from Chernyakhovskogo 2011-06-06.
+
+HW_C155_1
+
+    Egreat S900 media player.
+
+    [serge] 2011-06-07 Registered.
+
+HW_C155_2
+
+    Remote control for Egreat S900 media player (HW_C155_1).
+
+    [serge] 2011-06-07 Registered.
+
+..........................................................................
+
+Batch HW_C156
+
+HW_C156_1
+
+    SBAID BD8 media player.
+
+    [serge] 2011-06-08 Registered.
+
+..........................................................................
+
+Batch HW_C157
+
+HW_C157_1
+
+    VIZIO VBR220 BD player.
+
+    [serge] 2011-06-08 Registered.
+
+HW_C157_2
+
+    Remote control for VIZIO VBR220 BD player (HW_C157_1)
+
+    [serge] 2011-06-08 Registered.
+
+..........................................................................
+
+Batch HW_C158
+
+HW_C158_1
+
+    Vitek VT4002SR DVD Player.
+
+    [serge] 2011-06-08 Registered.
+
+HW_C158_2
+
+    Remote control for Vitek VT4002SR DVD player (HW_C158_1).
+
+    [serge] 2011-06-08 Registered.
+
+..........................................................................
+
+Batch HW_C159
+
+HW_C159_1
+
+    Egreat Network media player.
+
+    [serge] 2011-06-08 Registered.
+
+..........................................................................
+
+Batch HW_C160
+
+HW_C160_1
+
+    Egreat S2 media player.
+
+    [serge] 2011-06-08 Registered.
+
+HW_C160_2
+
+    Power adapter for Egreat S2 media player (HW_C160_1).
+
+    [serge] 2011-06-08 Registered.
+
+..........................................................................
+
+Batch HW_C161
+
+HW_C161_1
+
+    KAIBOER K8 media player.
+
+    [serge] 2011-06-08 Registered.
+
+HW_C161_2
+
+    Power adapter for KAIBOER K8 media player (HW_C161_1).
+
+    [serge] 2011-06-08 Registered.
+
+..........................................................................
+
+Batch HW_S162
+
+HW_S162_1
+
+    Small GeniaTech DVB-S board taken from a complete product, In and Out
+    antenna connector.
+    Marks: SU3000 V1.3 090625.
+    Chipset: Montage M88DS3000/M88TS2020.
+
+    [mike] 2011-06-01 Registered.
+
+..........................................................................
+
+Batch HW_C164
+
+    Bought retail by serge.
+
+HW_C164_1
+
+    TeVii S660 S2 DVB-S USB box.
+    Marks: v1.2 100317.
+
+    [mike] 2011-06-01 Registered.
+
+..........................................................................
+
+Batch HW_S165
+
+HW_S165_1
+
+    DVB-S extension board by GeniaTech, 2 smart-card readers, USB connector
+    with plastic skirt.
+    Chipset: Montage M88DS3000/M88TS2020.
+    Marks: RS6005 V1.0 2011/02/19.
+
+    [mike] Soldered a wire to the DS3000 V_SEL pin.
+    [mike] 2011-06-01 Registered.
+    [mike] 2011-07-19 Tested in Dune HD Max with generator, no glitches were
+    noticed as opposed to the HW_S180_1 (newer sample) in the same
+    configuration.
+
+HW_S165_2
+
+    DVB-S extension board by GeniaTech, 2 smart-card readers, USB connector
+    with plastic skirt.
+    Chipset: Montage M88DS3000/M88TS2020.
+    Marks: RS6005 V1.0 2011/02/19.
+
+    [mike] Soldered a wire to the DS3000 V_SEL pin.
+    [mike] 2011-06-01 Registered.
+
+..........................................................................
+
+Batch HW_S166
+
+HW_S166_1
+
+    USB extension board by GeniaTech.
+    2 USB ports, 4 LEDs, no plastic skirt for the USB connector.
+
+    [mike] 2011-06-01 Registered.
+
+..........................................................................
+
+Batch HW_C167
+
+HW_C167_1
+
+    Sony BDP-S500.
+
+    [serge] 2011-06-16 Registered.
+
+HW_C167_2
+
+    Remote control for Sony BDP-S500.
+
+    [serge] 2011-06-16 Registered.
+
+..........................................................................
+
+Bath HW_C168
+
+HW_C168_1
+
+    Panasonic DMP-BD30EE-K.
+
+    [serge] 2011-06-16 Registered.
+
+HW_C168_2
+
+    Remote control for Panasonic DMP-BD30EE-K.
+
+    [serge] 2011-06-16 Registered.
+
+..........................................................................
+
+Batch_C169
+
+HW_C169_1
+
+    Media player Gigabyte D100-RH.
+
+    [serge] 2011-06-16 Registered.
+
+..........................................................................
+
+Batch HW_C170
+
+HW_C170_1
+
+    Media player PS340L2 (Kartina.TV).
+
+    [serge] 2011-06-16 Registered.
+
+..........................................................................
+
+Batch HW_C171
+
+HW_C171_1
+
+    Media player SIG-2201E (Kartina.TV).
+
+    [serge] 2011-06-16 Registered.
+
+..........................................................................
+
+Bath HW_C172
+
+HW_C172_1
+
+    Media player Egreat EG-M32A.
+
+    [serge] 2011-06-16 Registered.
+
+HW_C172_2
+
+    Remote control for Media player Egreat EG-M32A.
+
+    [serge] 2011-06-16 Registered.
+
+..........................................................................
+
+Batch HW_C173
+
+HW_C173_1
+
+    DVD media player BBK DV726SI.
+
+    [serge] 2011-06-29 Registered.
+
+HW_C172_2
+
+    Remote control for DVD media player BBK DV726SI.
+
+    [serge] 2011-06-29 Registered.
+
+..........................................................................
+
+Batch HW_C174
+
+HW_C174_1
+
+    DVD media player PHILIPS DVP3146K.
+
+    [serge] 2011-06-29 Registered.
+
+..........................................................................
+
+Batch HW_S175
+
+    Received from Kentec on 2011-06-28.
+
+HW_S175_1_1
+HW_S175_1_2
+
+    Power adaptor 12V 3A.
+
+    [serge] 2011-06-29 Registered.
+
+HW_S175_2_1
+HW_S175_2_2
+HW_S175_2_3
+
+    Power adaptor 12V 1.5A.
+
+    [serge] 2011-06-29 Registered.
+
+..........................................................................
+
+Batch HW_C176
+
+HW_C176_1
+
+    Media player Egreat Networked Media Tank.
+
+    [serge] 2011-06-29 Registered.
+
+HW_C176_2
+
+    Remote control for Media player Egreat Networked Media Tank.
+
+    [serge] 2011-06-29 Registered.
+
+..........................................................................
+
+Batch HW_C177
+
+    Received from CTI 2011-07-05
+
+HW_C177_1
+
+    Media player Sagemcom IAD85 HD CTI.
+
+    [serge] 2011-07-05 Registered.
+    [mike] 2011-07-19 Returned to CTI.
+
+HW_C177_2
+
+    Remote control for Media player Sagemcom IAD85 HD CTI.
+
+    [serge] 2011-07-05 Registered.
+    [mike] 2011-07-19 Returned to CTI.
+
+HW_C177_3
+
+    Power adaptor for Sagemcom IAD85 HD CTI.
+
+    [serge] 2011-07-05 Registered.
+    [mike] 2011-07-19 Returned to CTI.
+
+..........................................................................
+
+Batch HW_C178
+
+HW_C178_1
+
+    Media player Gigabyte D100-RH.
+
+    [serge] 2011-07-08 Registered.
+
+HW_C178_2
+
+    Power adaptor for Gigabyte D100-RH.
+
+    [serge] 2011-07-08 Registered.
+
+..........................................................................
+
+Batch HW_S179
+
+    Recieved from Izvekov 2011-07-11
+
+HW_S179_1
+
+    Power adaptor 5V 2A.
+
+    [serge] 2011-07-11 Registered.
+
+HW_S179_2
+
+    Extension board for Smart ME.
+
+    [serge] 2011-07-11 Registered.
+
+HW_S179_3_1
+HW_S179_3_2
+HW_S179_3_3
+
+    Wi-Fi module for Small and Micro. With pins and IPEX socket.
+
+    [serge] 2011-07-11 Registered.
+
+..........................................................................
+
+Batch HW_S180
+
+    Recieved from Kentec 2011-07.
+
+HW_S180_1
+
+    DVB-S extension board, 1 tuner, card reader slots not soldered.
+    Chipset: Montage M88DS3002/M88TS2020, MA8128.
+    Marks: RS6005 V1.0 2011/02/19.
+    Card reader chips are detected in Windows and Linux as opposed to the
+    previous samples of the same type.
+
+    [mike] 2011-07-19 Registered.
+    [mike] 2011-07-19 Tested with Dune HD Max with generator; works with
+    glitches as opposed to the HW_S165_1 (older sample of the same type) in
+    the same configuration.
+
+..........................................................................
+
+Batch HW_P181
+
+HW_P181_1
+
+    Dune HD Max.
+
+    [serge] 2011-07-20 Registered.
+
+..........................................................................
+
+Batch HW_P182
+
+    Received from rib.
+
+HW_P182_1
+
+    Dune HD Smart D1.
+
+    [serge] 2011-07-28 Registered.
+
+HW_P182_2
+
+    Dune HD Smart D1.
+
+    [serge] 2011-07-28 Registered.
+
+..........................................................................
+
+Batch HW_S183
+
+    Received from Taiwan.
+
+HW_S183_1
+
+    Dune HD TV-101.
+
+    [serge] 2011-07-28 Registered.
+
+HW_S183_2_1
+HW_S183_2_2
+
+    PSU for Dune HD Max.
+
+    [serge] 2011-07-28 Registered.
+
+HW_S183_3_1
+HW_S183_3_2
+
+    BD loader BP-28.
+
+    [serge] 2011-07-28 Registered.
+
+..........................................................................
+
+Batch HW_S184
+
+    Received from Taiwan by rib.
+
+HW_S184_1
+
+    MB Intel Atom 146x102 mm (for Hi-End).
+
+    [serge] 2011-08-22 Registered.
+    [serge] 2011-08-24 Taken by rib.
+
+HW_S184_2_1
+
+    [serge] 2011-08-24 Taken by rib.
+
+HW_S184_2_2
+
+    7'' touchscreen 18-bit TTL.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S184_3
+
+    7'' touchscreen LVDS for Dune HD Pro.
+
+    [serge] 2011-08-22 Registered.
+    [serge] 2011-08-24 Taken by rib.
+
+HW_S184_4_1
+HW_S184_4_2
+
+    USB cable for touchscreen controller.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S184_5_1
+
+    [serge] 2011-08-24 Taken by rib.
+
+HW_S184_5_2
+
+    Controller for touchscreen.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S184_6_1
+HW_S184_6_2
+
+    Cable touchscreen -> USB.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S184_7_1
+HW_S184_7_2
+
+    Cable for TTL VGA 18 bit.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S184_8_1
+HW_S184_8_2
+
+    Connector for TTL VGA cable.
+
+    [serge] 2011-08-22 Registered.
+
+..........................................................................
+
+HW_S185
+
+    Received from Taiwan by rib.
+
+HW_S185_1
+
+    Reference board HD. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S185_2
+
+    Reference board SD. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S185_3
+
+    Remote control for Novatek HD. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S185_4
+
+    Remote control for Novatek SD. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S185_5
+
+    Programmator for Navotek. TODO serge: Fix English. Fix typos. Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S185_6
+
+    COM cable for Novatek. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+..........................................................................
+
+HW_S186
+
+    Received by package from Taiwan. TODO serge: What does it mean "by package"?
+
+HW_186_1_1
+HW_186_1_2
+
+    Extension card for Dune HD Smart ME. TODO serge: What kind of card?
+
+    [serge] 2011-08-22 Registered.
+
+..........................................................................
+
+HW_S187
+
+    Received a package PPR1 from Taiwan. What does it mean "a package"?
+
+HW_S187_1_1
+
+    Dune HD TV-101. "SMP8671AD". TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S187_1_2
+
+    Dune HD TV-101. "SMP8671AD". TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S187_1_3
+
+    Dune HD TV-101. "SMP8671AD". TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+    [mike] 2011-08-23 Taken by rib.
+    [mike] 2011-08-24 Returned by rib.
+
+HW_S187_1_4
+
+    Dune HD TV-101. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+    [serge] 2011-08-23 Given to CTI by serge.
+
+HW_S187_1_5
+
+    Dune HD TV-101. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+    [mike] 2011-08-23 Taken by krylov.
+
+HW_S187_2_1
+
+    Kartina Micro HD. "SMP8671A". TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S187_3_1
+HW_S187_3_2
+HW_S187_3_3
+HW_S187_3_4
+HW_S187_3_5
+
+    Remote control for TV-101. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S187_4_1
+
+    Remote control for Kartina Micro HD. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S187_5_1
+HW_S187_5_2
+HW_S187_5_3
+HW_S187_5_4
+HW_S187_5_5
+HW_S187_5_6
+
+    Cable mini-jack-to-3xRCA.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S187_6_1
+
+    PSU WA-10I05FG 5V 2A.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S187_6_2
+
+    PSU WA-10I05FG 5V 2A.
+
+    [serge] 2011-08-22 Registered.
+    [serge] 2011-08-23 Given to CTI.
+
+HW_S187_6_3
+HW_S187_6_4
+
+    PSU WA-10I05FG 5V 2A. TODO serge:  Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S187_7_1
+
+    PSU WA-10I05R 5V 2A. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+..........................................................................
+
+Batch HW_S188
+
+    Received from Kentek (Taiwan) by rib 2011-08-20. PPR2.
+
+HW_S188_1_1
+
+    TV-201 with hand-made SmartCardReader slot.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S188_1_2
+
+    PSU WA-13A05R 5V, 2.5A, for TV-201.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S188_2_1
+
+    Kartina Micro HD, Numonyx Flash, PPR2. "SMP8671A".
+
+    [serge] 2011-08-22 Registered.
+
+HW_S188_2_2
+
+    Kartina Micro HD, Micron Flash, PPR2. "SMP8671A".
+
+    [serge] 2011-08-22 Registered.
+    [mike] 2011-09-22 Taken by orlov.
+
+HW_S188_3_1
+
+    Dune TV-101, Numonyx Flash, PPR2.
+
+    [serge] 2011-08-22 Registered.
+    [mike] 2011-08-22 Taken by rib.
+    [mike] 2011-08-25 Returned by rib.
+    [mike] 2011-08-25 LED was made non-bright by rib (a few days ago).
+    [serge] 2011-10-17 Taken by ssn on Chernyakhovskogo office.
+
+HW_S188_3_2
+
+    Dune TV-101, no MCU, Numonyx Flash, PPR2. "SMP8671AD".
+
+    [serge] 2011-08-22 Registered.
+
+HW_S188_3_3
+
+    Dune TV-101, Micron Flash, PPR2. "SMP8671AD".
+
+    [serge] 2011-08-22 Registered.
+
+HW_S188_4_1
+HW_S188_4_2
+HW_S188_4_3
+
+    PSU 5V 2A. TODO serge: Add more details.
+
+    [serge] 2011-08-22 Registered.
+
+HW_S188_5_1
+HW_S188_5_2
+HW_S188_5_3
+
+    Cable mini-jack-to-3xRCA.
+
+    [serge] 2011-08-22 Registered.
+
+..........................................................................
+
+HW_C189
+
+    Received from Chernyakhovskogo office 2011-08-22.
+
+HW_C189_1
+
+    Elecard ITelec STB 820.
+
+    [serge] 2011-08-22 Registered.
+
+HW_C189_2
+
+    Remote control for Elecard ITelec STB 820.
+
+    [serge] 2011-08-22 Registered.
+
+HW_C189_3
+
+    PSU 12V, 2A for ITelec STB 820.
+
+    [serge] 2011-08-22 Registered.
+
+..........................................................................
+
+Batch HW_S190
+
+    Received 2011-07-31 from dkv, originally from Kentec.
+
+HW_S190_1_1
+HW_S190_1_2
+
+    Dune remote control with "Light" button.
+
+HW_S190_2
+
+    Dune HD TV-101 sample with case and soldered Wi-Fi GWF-3M05 with the IPEX
+    connector.
+
+HW_S190_3_1
+
+    Dune HD TV-201 sample mainboard with UART connector.
+
+HW_S190_3_2
+
+    Dune HD TV-201 sample mainboard.
+
+HW_S190_4_1
+HW_S190_4_2
+
+    5V 2.5A PSU, candidate for Dune HD TV-201. Accompanied with UK, US, EU and
+    Chinese plug.
+
+..........................................................................
+
+Batch HW_I191
+
+    Received 2011-09-22 from General Satellite.
+
+HW_I191_1_1
+HW_I191_1_2
+HW_I191_1_3
+
+    Tricolor TV SmartCard.
+
+HW_I191_2_1
+HW_I191_2_2
+
+    PlatformaHD SmartCard.
+
+    [serge] 2011-09-22 Registered.
+
+..........................................................................
+
+Batch HW_S192
+
+HW_S192_1
+
+    Reference board Sigma with 8646 processor.
+    
+HW_S192_2
+
+    Dune HD Max MB v1.0 on 8646 chip.
+    
+HW_S192_3
+
+    PSU 12V 3.33A
+    
+HW_S192_4
+
+    Remote control Sigma designs.
+    
+    [serge] 2011-09-22 Registered.
+
+..........................................................................
+
+Batch HW_C193
+
+    Received 2011-10-27 from Megafon by BCC. 
+
+HW_C193_1
+
+    DVB-IPTV digital IPTV reciever IF-402HD.
+
+HW_C193_2
+
+    Remote control for DVB-IPTV digital IPTV receiver IF-402HD.    
+    
+    [serge] 2011-11-03 Registered.
+
+..........................................................................
+
+Batch HW_C194
+
+    Recieved 2011-10-27 from Beltelecom.
+    
+HW_C194_1
+
+    IPTV STB ZXV10B700 V2A.
+
+HW_C194_2
+
+    Remote control from IPTV STB ZXV10B700 V2A.
+
+HW_C194_3
+
+   PSU for IPTV STB ZXV10B700 V2A.
+
+[serge] 2011-11-03 Registered.   
+    
+..........................................................................
+
+Batch HW_S195
+
+    Received end of october 2011 from HK. 
+
+HW_S195_1_1
+HW_S195_1_2
+
+    PSU WA-10I05R 5V 2A, sample for TV-101. Accompanied with UK, US, EU and
+    Chinese plug.
+
+HW_S195_2_1
+HW_S195_2_2
+
+    PSU WA-10I05FG 5V 2A, sample for TV-101.
+
+HW_S195_3_1
+HW_S195_3_2
+
+    Remote control for Dune with LIGHT button.        
+
+HW_S195_4_1
+HW_S195_4_2    
+
+    Remote control for TV-101.
+    53
+    [serge] 2011-11-03 Registered. 
+
+..........................................................................
+
+Batch HW_I196
+
+    Received from HK 2011-11-11.
+
+HW_I196_1
+
+    FyreTV IPTV STB HS6020W media player.
+
+    [serge] 2011-11-11 Registered.
+
+HW_I196_2
+
+    Remote control for FyreTV IPTV STB HS6020W media player (HW_I196_1).
+
+    [serge] 2011-11-11 Registered.
+
+HW_I196_3
+
+    Power adaptor for FyreTV IPTV STB HS6020W media player (HW_I196_1).
+
+    [serge] 2011-11-11 Registered.    
+    
+..........................................................................
+
+Batch HW_S197
+
+    Received from HK 2011-11-11.
+
+HW_S197_1
+HW_S197_2
+
+    Dune Qwerty wireless keyboard, International layout.
+    
+    [serge] 2011-11-11 Registered.    
+    
+..........................................................................
+
+Batch HW_S198
+
+HW_S198_1_1
+
+    Dune HD TV-101.
+    
+HW_S198_1_2
+
+    PSU for Dune HD TV-101.
+
+HW_S198_1_3    
+
+    Remote control for Dune HD TV-101.
+    
+    [serge] 2011-11-21 Registered.
+
+..........................................................................
+
+Batch HW_S199
+
+    Received by krylov 2011-11-26 via Aeroflot, from HK.
+
+HW_S199_1_1
+
+    Dune HD Max mainboard with SD8646AD, v1.1.
+    [mike] 2011-11-28 Registered.
+
+HW_S199_1_2
+
+    Dune HD Max mainboard with SD8646AD, v1.1.
+    [mike] 2011-11-28 Registered.
+
+HW_S199_2_1
+
+    Dune HD Smart mainboard with SD8646AD.
+    [mike] 2011-11-28 Registered.
+
+HW_S199_2_2
+
+    Dune HD Smart mainboard with SD8646AD.
+    [mike] 2011-11-28 Registered.
+
+..........................................................................
+
+Batch HW_S200
+
+    Received by mike 2011-12-05 <- Sedov <- Aeroflot <- HK.
+    
+HW_S200_1_1    
+
+    DVB-S Extension Board by JacTech. JS-511 v1.0 2011-11-05.
+    1 tuner, 1 AC1038 card reader. Shield on the tuner. 
+    Montage M86DS3002/M88TS2020. No plastic skirt for the USB connector.
+    
+    [mike] 2011-12-05 Registered.
+
+HW_S200_1_2    
+
+    DVB-S Extension Board by JacTech. JS-521 v1.0 2011-10-28.
+    2 tuners. Shields on the tuners. 
+    Montage M86DS3002/M88TS2020. No plastic skirt for the USB connector.
+    
+    [mike] 2011-12-05 Registered.
+
+    
+.............................................................................
+
+Batch HW_S201
+
+    Brought by rib 2011-12-11 from Kentec.
+
+HW_S201_1_1
+
+    Box from HD TV-301.
+    
+    [serge] 2011-12-12 Registered.
+    
+HW_S201_1_2
+
+    PSU MU12-G050200-C5 5V 2A for Dune HD TV-301.
+    
+    [serge] 2011-12-12 Registered.
+    
+HW_S201_1_3
+
+    Mainboard for HD TV-301.
+    
+    [serge] 2011-12-28 Registered.
+    
+    
+HW_S201_2
+
+   Mainboard for Dune HD TV-301.
+   
+   [serge] 2011-12-12 Registered.
+   [serge] 2011-12-28 Inserted in box HW_S201_1_1.
+   
+.............................................................................
+
+Batch HW_I202
+
+    Received from CTI 2011-12-15
+    
+HW_I202_1_1
+
+    HD TV player Sagemcom IAD85 253337964-B01.
+    
+    [serge] 2011-12-15 Registered.
+
+HW_I202_1_2
+
+    Sagemcom power adapter XKD-C1500IC12.0-18A-DE 12V 1.5A.
+    
+    [serge] 2011-12-15 Registered.
+
+HW_I202_1_3
+
+    Remoute control for HD TV player Sagemcom IAD85.
+    
+    [serge] 2011-12-15 Registered.
+
+HW_I202_2_1
+
+    IP STB Amino AmiNET100. 
+
+    [serge] 2011-12-15 Registered.
+
+HW_I202_2_2
+
+    Power adaptor ACGN-28T 5v, 1.5A for IP STB Amino AmiNET100.    
+
+    [serge] 2011-12-15 Registered.
+
+HW_I202_2_3
+   
+    Remote control TZ-RC43B-15 for IP STB Amino AmiNET100.
+   
+    [serge] 2011-12-15 Registered.
+   
+HW_I202_2_4
+
+    Cable SCART-DIN for IP STB Amino AmiNET100.
+
+    [serge] 2011-12-15 Registered.
+    
+...........................................................................
+
+Batch HW_R203
+
+    Received by mike 2011-12-05 <- Sedov <- Aeroflot <- HK.
+    
+HW_R203_1    
+
+    Reference board by Sigma Designs, SMP8446 Vantage. Rev.E2.
+    
+    [mike] 2011-12-15 Registered.    
+
+...........................................................................
+
+Batch HW_R204    
+
+    Recieved from agent of Sigma 2011-12-15
+    
+HW_R204_1
+
+    PLC transceiver CG2210CP CTC034 Sigma Designs.
+    MAC 00:C5:D9:00:44:EE.
+
+    [serge] 2011-12-15 Registered.
+    
+HW_R204_2
+
+    PLC-enabled player SIGMA DESIGNS CTC034 on 8670 chip. 
+    MAC 00:C5:D9:00:E3:54
+    Case looks like a wall plug adaptor.
+
+    [serge] 2011-12-15 Registered.
+    
+HW_R204_3
+
+    Remote control SIGMA (radio) CTC034 ZiRC-EU 071150 V1.9.
+
+    [serge] 2011-12-15 Registered.
+    
+..........................................................................
+    
+Batch HW_I205
+
+    Received from Chernyakhovskogo 2011-12-19
+    
+HW_I205_1_1
+
+    Convertor (will be details)
+    
+    [serge] 2011-12-21 Registered.
+
+HW_I205_1_2
+    
+    Power adapter Wattac BA024ICI-180-A03 for convertor.
+    
+    [serge] 2011-12-21 Registered.
+    
+HW_I205_1_3
+
+    Wi-Fi antena for convertor.
+    
+    [serge] 2011-12-21 Registered.
+
+HW_I205_2 
+
+    INTERACT Funk-Schalter art-nr.064312.
+    
+    [serge] 2011-12-21 Registered.
+    [rib] 2011-12-20 Taken to Kentec.
+    [rib] 2012-01-10 Returned to the office. 
+    
+HW_I205_3
+
+    INTERACT Funk-Dimmer art-nr.064336.ZW EDAN 300.
+
+    [serge] 2011-12-21 Registered.
+    
+HW_I205_4
+
+    Danfoss Link, Living connect, an electronic radiator termostat.
+    
+    [serge] 2011-12-21 Registered.
+
+HW_I205_5
+
+    Aeon Door/Window Sensor. Model:DSB04100-ZWEU (868.42MHz)
+    
+    [serge] 2011-12-21 Registered.
+    
+HW_I205_6
+
+    Sealed contact.
+    
+    [serge] 2011-12-21 Registered.
+    
+HW_I205_7
+
+    IR cable plug.
+    
+    [serge] 2011-12-21 Registered.
+    
+HW_I205_8
+
+    Z-Wave USB Dongle.(Radiostick)
+    
+    [serge] 2011-12-21 Registered.
+    [rib] 2011-12-20 Taken to Kentec.
+    [rib] 2012-01-10 Returned to the office. 
+    [mike] 2012-07-27 Sent to GlobalLogic (by train).
+    
+............................................................................
+
+Batch HW_C206
+
+    Buy in SIDEX.RU by serge 2011-12-22
+
+HW_C206_1
+
+    HD player Popcorn Hour Popbox V8. SMP8670.
+    
+    [serge] 2011-12-22 Registered.
+
+HW_C206_2
+
+    Remote control for HD player Popcorn Hour Popbox V8.
+    
+    [serge] 2011-12-22 Registered.
+
+HW_C206_3
+
+    Power adaptor 5V 2A FJ-SW0502000E for Popcorn Hour Popbox V8.
+    
+    [serge] 2011-12-22 Registered.
+    
+..........................................................................
+
+Batch HW_I207
+
+    Received from Z-Wave 2011-12-22 by serge.
+    
+HW_I207_1_1
+
+    Z-Wave Plug-in on/off Module AN158-2.
+    
+    [serge] 2011-12-22 Registered.
+    
+HW_I207_1_2
+
+    Z-Wave Plug-in on/off Module AN158-2.
+    
+    [serge] 2011-12-22 Registered.
+    [mike] 2012-07-27 Sent to GlobalLogic (by train).
+    
+HW_I207_1_3
+
+    Z-Wave Plug-in on/off Module AN158-2.
+    
+    [serge] 2011-12-22 Registered.
+    [mike] 2012-07-27 Sent to GlobalLogic (by train).
+    
+HW_I207_2
+
+    Z-Wave USB Dongle.(Radiostick)
+
+    [serge] 2011-12-22 Registered.    
+    
+HW_I207_3
+
+    Z-Wave EZMotion Motion Temp & Light Sensor.    
+
+    [serge] 2011-12-22 Registered.    
+
+HW_I207_4
+ 
+    Z-Wave Funk-Wandsender Art.-Nr.054436.    
+    
+    [serge] 2011-12-22 Registered.    
+    
+..........................................................................
+
+Batch HW_S208
+
+    Brought 2012-01-03 by rib from Kentec.
+    
+HW_S208_1_1
+
+    Dune HD TV-301 full sample, with Wi-Fi module.
+    Aluminum black-painted bottom.
+    At the moment of registration, fully corresponds to the 1st expected MP. 
+    Contains a manual hw fix for the proper USB-Slave/MCU behavior.
+
+    [mike] 2012-01-05 Registered.    
+    
+HW_S208_1_2
+
+    Dune HD TV-301 sample, without HDD rack, with Wi-Fi module.
+    Aluminum non-painted bottom.
+    At the moment of registration, fully corresponds to the 1st expected MP.
+    Contains a manual hw fix for the proper USB-Slave/MCU behavior.
+
+    [mike] 2012-01-05 Registered.    
+
+HW_S208_1_3
+HW_S208_1_4
+
+    Dune HD TV-301 mainboard sample.
+    Does not include a manual hw fix for the proper USB-Slave/MCU behavior,
+    thus, when powered from a PC, the MCU power is on.
+
+    [mike] 2012-01-08 Registered.    
+
+HW_S208_1_5
+
+    Dune HD TV-301 mainboard sample.
+    Does not include a manual hw fix for the proper USB-Slave/MCU behavior,
+    thus, when powered from a PC, the MCU power is on.
+    Z-Wave module soldered.
+
+    [mike] 2012-01-08 Registered.    
+
+HW_S208_2
+
+    IR extender for TV-301.
+
+    [mike] 2012-01-08 Registered.    
+    
+HW_S208_3_1
+HW_S208_3_2
+
+    USB 3.0 A-B short cable for TV-301.
+
+    [mike] 2012-01-08 Registered.    
+    
+HW_S208_4_1
+HW_S208_4_2
+
+    HDMI cable for TV-301.
+
+    [mike] 2012-01-08 Registered.    
+
+HW_S208_5_1
+HW_S208_5_2
+
+    Type "B" (stereo-compatible) minijack->3xRCA cable for TV-301.
+    
+    [mike] 2012-01-08 Registered.    
+
+HW_S208_6_1
+HW_S208_6_2
+HW_S208_6_3
+HW_S208_6_4
+HW_S208_6_5
+
+    PSU 12V 1.5A by Asian Power Devices, changeable plug, for TV-301.
+
+HW_S208_7_1
+
+    Fan by Shenzhen Semio Tech Dev, 80x15 mm, 12V, 0.2A, SM8015SM. "2000 rpm"?.
+
+    [mike] 2012-01-08 Registered.    
+
+HW_S208_7_2
+
+    Fan by Shenzhen Semio Tech Dev, 80x15 mm, 12V, 0.2A, SM8015SL. "1500 rpm"?.
+
+    [mike] 2012-01-08 Registered.    
+
+HW_S208_8_1
+HW_S208_8_2
+
+    Z-Wave module, EU+. "94V-0 5209 E246995 EET-4".
+
+    [mike] 2012-01-08 Registered.
+
+..........................................................................
+
+Batch HW_S209
+
+    This TV-101 was named HW_S192_1_1 and HW_S192_1_3, then will be "lost"
+
+HW_S209_1_1
+HW_S209_1_2
+
+    Main board TV-101 v2.0
+
+    [serge] 2012-01-11 Registered.  
+
+..........................................................................
+
+Batch HW_S210
+
+    This device was bought in www.meljin.ru 2012-01-20 by serge.
+    
+HW_S210
+
+    Microsoft Bluetooth Mobile Keyboard 5000.
+
+    [serge] 2012-01-20 Registered.
+
+..........................................................................
+
+Batch HW_S211
+
+HW_S211_1
+
+    PCtv nanoStick T2 (HD TV on your PC).
+
+    [serge] 2012-01-20 Registered.
+
+HW_S211_2
+
+    Remote control for PCtv nanoStick T2.
+
+    [serge] 2012-01-20 Registered.
+
+HW_S211_3
+
+    Antenna for PCtv nanoStick T2.
+
+    [serge] 2012-01-20 Registered.
+
+HW_S211_4
+
+    Antenna adaptor for PCtv nanoStick T2.
+
+    [serge] 2012-01-20 Registered.
+
+..........................................................................
+
+Batch HW_S212
+
+    Received on 2012-01-25.
+
+HW_S212_1_1
+
+    DVB module JS-521 V1.1 2011/12/08 2xDVB for SMART ME.
+
+    [serge] 2012-01-26 Registered.
+
+HW_S212_1_2
+
+    DVB module JS-511 V1.1 2011/12/09 DVB+SMART Card slot for SMART ME.
+
+    [serge] 2012-01-26 Registered.
+
+HW_S212_1_3
+
+    DVB module JS-346 V1.1 2011/12/12 DVB+Big Flash card for SMART ME.
+
+    [serge] 2012-01-26 Registered.
+
+HW_S212_2_1
+
+    Mainboard for TV-101 V2 "#3 IR only #3". Contains Z-Wave EU module.
+
+    [serge] 2012-01-26 Registered.
+    [mike] 2012-08-09 Z-Wave firmware upgraded to "Z-Stick 4.0" by 
+    Poltorak.
+    [yurian] 2012-09-04 Intended to be given to Poltorak for MGTS stand.
+
+HW_S212_2_2
+
+    Mainboard for TV-101 v.2 IR+I2C only #2. Contains Z-Wave EU module.
+
+    [serge] 2012-01-26 Registered.
+
+HW_S212_2_3
+
+    Mainboard for TV-101 V2. "YPbPr #4". Contains Z-Wave EU module. 
+    Note: Component Video Out implemented instead of IR Extender.
+
+    [serge] 2012-01-26 Registered.
+    [mike] 2012-08-09 Z-Wave firmware upgraded to "Z-Stick 4.0" by 
+    Poltorak.
+    [rib] 2012-08-10 Antenna connector fixed and working. Tested with Z-Way.
+    TODO yurian: Clarify; fix misprints.
+    [yurian] 2012-08-30 Z-Wave module unsoldered and soldered into TV-201 
+    sent to IFA (not testet).
+
+HW_S212_3_1
+HW_S212_3_2
+HW_S212_3_3
+HW_S212_3_4
+HW_S212_3_5
+
+    Remote control for dune with keyboard.
+
+    [serge] 2012-01-26 Registered.
+
+..........................................................................
+
+Batch HW_C213
+
+HW_C213_1_1
+
+    Media Player RCL Wepad8110800285 with HDD Rack RCL Wepad8110800285.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_1_2
+
+    AC ADAPTER RS-AB02J00 100-240V~ 12V 2A
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_1_3
+
+    Remote control for Media Player with HDD Rack RCL Wepad8.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_1_4
+
+    Bluetooth mouse with bluetooth dongle.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_1_5
+
+    WLAN adapter PW-DN523 300Mbps.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_1_6
+
+    CD Disk with Wi-Fi dongle soft.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_2_1
+
+    Android HDD Media Player BRAND WePad 6W.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_2_2
+
+    Switching adaprer model RSS1006-180120-W2E 12V 1.5A.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_2_3
+
+    Remote control for Android HDD Media Player BRAND WePad 6W.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_3_1
+
+    HD Media Player Wepad1 mini BRAND TV PC.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_3_2
+
+    Remote control for HD Media Player Wepad1 mini BRAND TV PC.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_4
+
+    Remote control for WePad player with HID compatible USB dongle.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_5
+
+    Power adaptor ZFXPA01000120EU 12V 1A.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_6_1
+HW_C213_6_2
+
+    Wireless mouse with USB dongle.
+
+    [serge] 2012-01-26 Registered.
+
+HW_C213_7_1
+HW_C213_7_2
+HW_C213_7_3
+HW_C213_7_4
+HW_C213_7_5
+
+    USB Gamepad HID compatible.
+
+    [serge] 2012-01-26 Registered.
+
+..........................................................................
+
+Batch HW_P214
+
+HW_P214_1_1
+HW_P214_1_2
+
+    SMART ME.
+
+    [serge] 2012-02-10 Registered.
+
+HW_P214_2_1
+HW_P214_2_2
+
+    PSU for SMART ME. Model: AU1361203n 12V 3A. Labled "Smart ME ONLY".
+    Elementech International Co. Thin connector.
+
+    [serge] 2012-02-10 Registered.
+
+..........................................................................
+
+
+Batch HW_S215
+
+HW_S215_1_1
+
+    Wi-Fi inside module for TV-101 with external antenna.
+
+    [serge] 2012-03-01 Registered.
+
+HW_S215_1_2
+
+    Wi-Fi inside module for TV-101 with external antenna.
+
+    [serge] 2012-03-01 Registered.
+    [serge] 2012-03-01 taken isvekov for sedov.
+
+
+HW_S215_2
+
+    Wi-Fi inside module for TV-101 with internal antenna.
+
+    [serge] 2012-03-01 Registered.  
+
+..........................................................................
+
+Batch HW_R216
+
+HW_R216
+
+    Reference board on chip SMP8910-P62-CBE3 from Sigma Designs. Labeled: Board#118.
+    FAB. 23-001010-02 Rev.02 
+
+    [serge] 2012-02-16 Registered.
+
+..........................................................................
+
+Batch HW_C217
+
+HW_C217_1
+
+    General Satellite receiver DVB-T2 TE8714.
+
+    [serge] 2012-04-23 Registered.
+
+HW_C217_2
+
+    Remote control for General Satellite receiver DVB-T2 TE8714.
+
+    [serge] 2012-04-23 Registered.
+
+HW_C217_3
+
+    Power adaptor SP-03B0504000-G 5V 4A for DVB-T2 TE8714.
+
+    [serge] 2012-04-23 Registered.
+
+..........................................................................
+
+Batch HW_S218
+
+    Received from Kentec by izvekov on 2012-06.
+
+HW_S218_1_1
+HW_S218_1_2
+
+    [rykov] 2012-07-26 Taken by rib.
+
+HW_S218_1_3
+    
+    Dune HD TV-201 mainboard with card reader cable.
+    "REV:A P/N:G14102010002".
+
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_2
+
+    Dune HD TV-201S2, fully assembled. Montage DS3000 + TS2022, Wi-Fi with
+    ext. antenna connector, no Z-Wave, card reader, no card reader cable.
+    Contains manual fix by rib: added capacitor for LNB voltage.
+
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_3
+
+    Dune HD TV-201T2, fully assembled. Sony CXD2834ER + Sony D2831WR,
+    Wi-Fi with ext. antenna connector, no Z-Wave, card reader,
+    no card reader cable.
+
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_4
+
+    Dune HD TV-201ATSC, fully assembled. LGDT3305 + MXL201RF,
+    Wi-Fi with ext. antenna connector, no Z-Wave, no card reader,
+    no card reader cable.
+    [rykov] 2012-07-11 Soldered capacitors by Yuri on card reader board as advised by rib.
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_4_1
+
+     Card reader board for TV-201 "REV:A P/N:G14100000132"
+
+     [rykov] 2012-07-11 Registered.
+
+HW_S218_5_1
+HW_S218_5_2
+
+    Dual card reader board for TV-201 "REV:A P/N:G14100000132".
+
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_6
+
+    Card reader board for TV-201 "REV:A P/N:G14100000132"
+    manually marked "4".
+
+    [rykov] 2012-06-21 Registered.
+    [mike] 2012-06-28 Soldered capacitors as advised by rib.
+
+HW_S218_7_1
+HW_S218_7_2
+
+    DVB-C board for TV-201 "REV:A P/N:G1410201C000". MXL241SF.
+
+    [rykov] 2012-06-21 Registered.
+    [rykov] 2012-07-26 Taken by rib.
+
+HW_S218_8
+
+    ATSC board for TV-201 "REV:A P/N:G1410201C000". LGDT3305 + MXL241SF. 
+
+    [rykov] 2012-06-21 Registered.
+    [yurian] 2012-08-13 Desolder Z6 for panasonic MN88436-CB(HW_S243_2), does not work.
+    
+HW_S218_9_1
+HW_S218_9_2
+HW_S218_9_3
+HW_S218_9_4
+HW_S218_9_5
+
+    Ribbon cable for TV-201 card reader bords.
+
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_10
+
+   DVB-S2 board for TV-201 "REV:A P/N:G1410201S2000". DS3000 + TS2022.
+   Contains manual fix by rib: added capacitor for LNB voltage.
+   Originally 22kHz did not work. After the fix voltage and 22kHz work.
+
+
+   [rykov] 2012-06-21 Registered.
+   [rib] 2012-08-04 LNB power chip replaced.
+
+HW_S218_11
+
+    Dune HD TV-201 mainboard without card reader cable.
+    "REV:A P/N:G14102010002".
+
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_12
+
+    Dune HD TV-201ATSC, fully assembled. LGDT3305 + MXL201RF,
+    Wi-Fi with ext. antenna connector, no Z-Wave, card reader,
+    no card reader cable.
+
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_13
+
+    Dune HD TV-201C, fully assembled. Single-chip MXL241SF,
+    Wi-Fi with ext. antenna connector, no Z-Wave, card reader, 
+    no card reader cable.
+
+    [rykov] 2012-06-21 Registered.
+    [mike] 2012-06-28 Given to Sinenko for DVB-C testing.
+    [rykov] 2012-07-25 Delivered to Verimatrix.
+    
+HW_S218_14
+
+    DVB-S2 board for TV-201 "REV:A P/N:G1410201S2000". DS3103 + TS2022.
+    NIM soldered on wires. Voltage does not work.
+
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_15
+
+    Dune HD TV-201 mainboard without card reader cable.
+    "REV:A P/N:G14102010002".
+
+    [rykov] 2012-06-21 Registered.
+
+HW_S218_16
+
+    DVB-S2 board for TV-201 "REV:A P/N:G1410201S2000". DS3000 + TS2022.
+    Originally voltage did not work. After the fix voltage and 22kHz work.
+
+    [rykov] 2012-06-21 Registered.
+    [rib] 2012-08-04 LNB power chip replaced.
+
+..........................................................................
+
+Batch HW_S219
+
+    Brought by Sedov in 2012-06.
+
+HW_I218_19_1
+
+    CI/CI+ CAM Neotion Conax. S/N: 7104727400, P/N: PRD-MCCx-1421,
+    "M:12", "D:9/02/12".
+    
+    [rykov] 2012-06-21 Registered.
+
+HW_I218_19_2
+
+    CI CAM Neotion Conax. S/N: 9104776477, P/N: PRD-MCCx-1452,
+    "M:12", "D:6/02/12".
+    
+    [rykov] 2012-06-21 Registered.
+
+HW_I218_19_3
+
+    CI CAM Neotion Viaccess. S/N: 2104779109, P/N: PRD-MCVx-4010,
+    "M:12", "D:15/02/12".
+    
+    [rykov] 2012-06-21 Registered.
+
+HW_I218_19_4
+
+    CI/CI+ CAM Neotion Irdeto secure. S/N: 0104434668, P/N: PRD-MCI0-1410,
+    "M:12", "D:29/11/11".
+    
+    [rykov] 2012-06-21 Registered.
+
+..........................................................................
+
+Batch HW_S220
+
+HW_S220_1
+
+    Sigma Designs SMP8670 mainboard with DVB-T2/C Sony CXD2834 + Situne.
+    UART soldered by mike.
+    
+    [rykov] 2012-06-21 Registered.
+
+..........................................................................
+
+Batch HW_S221
+
+HW_S221_1
+
+    DVB-T2 NIM Sony CXD2820 + Maxlinear MXL201RF, with adapter board for
+    Vantage 8670 soldered by mike.
+    
+    [rykov] 2012-06-21 Registered.
+
+..........................................................................
+
+Batch HW_I222
+
+    Bought 2012-06-23 at ics-stv.com by mike.
+
+HW_I222_1_1
+
+    Tricolor smart card. "5D74163A".
+    
+    [rykov] 2012-06-27 Registered.
+
+HW_I222_1_2
+
+    Tricolor smart card. "4098F59C"
+
+    [rykov] 2012-06-27 Registered.
+
+HW_I222_2_1
+
+    Raduga smart card. "4251 6088 145".
+    
+    [rykov] 2012-06-27 Registered.
+
+HW_I222_2_2
+
+    Raduga smart card. "4251 6088 111"
+
+    [rykov] 2012-06-27 Registered.
+
+HW_I222_3
+
+    DRE Crypt CAM. S/N: 0104660995, P/N: PRD-MCD2-4020,
+    "M:12", "D:31/01/12".
+    NOTE: The same module has been sent to rib 2012-06-24.
+
+    [rykov] 2012-06-27 Registered.
+
+HW_I222_4
+
+    DVB reciver Vantage HD 1100S "X9116W2M320901000044".
+    NOTE: The same reciver has been sent to rib 2012-06-24.
+
+    [rykov] 2012-06-27 Registered.
+
+..........................................................................
+
+Batch HW_S223
+
+    Received from Kentec by alex on 2012-07-02.
+
+HW_S223_1
+
+    Dune HD TV-201T2, fully assembled. Sony CXD2834ER + Sony D2831WR, Wi-Fi with
+    ext. antenna connector, card reader, with card reader cable.
+
+    [rykov] 2012-07-02 Registered.
+
+HW_S223_2_1
+
+    AC Adapter. Model No.: WA-18Q12R. Input: 100-240V~50-60Hz.
+    Output: 12V ~- 1.5A. "249045007-ABAB".
+
+    [rykov] 2012-07-02 Registered.
+
+HW_S223_2_2
+
+    AC Adapter. Model No.: WA-18Q12R. Input: 100-240V~50-60Hz.
+    Output: 12V ~- 1.5A. "249045000-ABAB".
+    
+    [rykov] 2012-07-02 Registered.
+
+HW_S223_3_1
+HW_S223_3_2
+
+    Dune HD remote control.
+
+    [rykov] 2012-07-02 Registered.
+
+HW_S223_4_1
+HW_S223_4_2
+HW_S223_4_3
+HW_S223_4_4
+
+    Ribbon cable for TV-201T2 MB<>SCR
+    YEH CHI E134727 AWM20624 60V 80CVW-1.
+    
+    [rykov] 2012-07-02 Registered.
+
+HW_S223_5
+
+    DVB-C/T2 board with Panasonic MN88472 + Maxlinear MXL603MN.
+    "PANDA V1.2-2L", "175-014-MXL603MN88472NIM-AP-REF" marked "2L 0008".
+
+    [rykov] 2012-07-02 Registered.
+    [mike] 2012-08-21 Info: Panasonic has requested Dune HD to return
+    this board on 2012-08-21. Dune HD has postponed this decision.
+
+..........................................................................
+
+Batch HW_R224
+
+    Received from Kentec by alex on 2012-07-02.
+
+HW_R224_1
+
+    USB extended board Maxlinear "PIC32MX460F" with power cables.
+
+    [rykov] 2012-07-02 Registered.
+
+HW_R224_2
+
+    Sony DVB S2 board "SN5614". CXD2850 Sony D2850AER.
+
+    [rykov] 2012-07-02 Registered.
+
+..........................................................................
+
+Batch HW_R225
+
+    Brought by dkv from rib 2012-07-03.
+
+HW_S225_1
+
+    Dune HD TV-201S2, fully assembled. Wi-Fi with ext. antenna connector,
+    no Z-Wave, card reader, with card reader cable.
+    Contains manual fix by rib: added capacitor for LNB voltage.
+    22kHz works.
+
+    [rykov] 2012-07-03 Registered.
+..........................................................................
+
+Batch HW_C226
+
+    Received from Germany by rykov on 2012-07-09.
+
+HW_C226_1
+
+    Himedia HD600A media player.
+    Outputs:
+    - Audio: coaxial, optical and composite.
+    - Video: composite, HDMI and component (3,5 jack).
+    Inputs: Ethernet, SATA power/data, SD/MMC card reader, 2xUSB.
+    Remote control, AC Adapter (RS-AB02J00) with U.S. plug.
+
+    [rykov] 2012-07-09 Registered.
+..........................................................................
+
+Batch HW_C227
+
+    Received from Germany by rykov on 2012-07-13.
+
+HW_C227_1
+
+    3view HD digital television recorder.
+    Model: 3viewHDMk1.3. SN: 2c5fbc1d30b07f3bd715ccb298b388b3.
+    Designed in UK. Made in UK.
+    Remote control, AC Adapter (RS-AB02J00) with U.K. plug.
+
+    [rykov] 2012-07-13 Registered.
+
+..........................................................................
+
+Batch HW_S228
+
+    Received from Kentec by rib on 2012-07-20.
+
+HW_S228_1
+
+    Dune HD TV-201S2 fully assembled. Wi-Fi with ext. antenna connector,
+    no Z-Wave, card reader, with card reader cable.
+    Contains manual fix by rib: added capacitor for LNB voltage.
+    22kHz works, but non standard shape.
+
+    [rykov] 2012-07-20 Registered.
+
+Batch HW_S229
+
+    Received from Kentec by rib on 2012-07-20.
+
+HW_S229_1
+
+    Dune HD TV-201T2 fully assembled. Sony CXD2834ER + Sony D2831WR.
+    Wi-Fi with ext. antenna connector, no Z-Wave, card reader, with card reader cable.
+
+    [rykov] 2012-07-20 Registered.
+
+HW_S229_2
+
+    Dune HD TV-201T2 fully assembled. Sony CXD2834ER + Sony D2831WR.
+    Wi-Fi with ext. antenna connector, no Z-Wave, card reader, with card reader cable.
+
+    [rykov] 2012-07-20 Registered.
+
+Batch HW_S230
+
+    Received from Kentec by rib on 2012-07-20.
+
+HW_S230_1
+
+    DVB-T2 board (Sony). Sony D283WR + Sony CXD2834ER. REV:A, P/N:G1410201T201. NON WORKS
+    Desolder smd component and cut PCB track for test stand (yurian 17.08.12)
+
+    [rykov] 2012-07-20 Registered.
+    [yurian] 2012-08-17 Desolder smd component and cut PCB track for test stand, does not work.
+    
+HW_S230_2
+
+    DVB-T2 board (Sony). Sony D283WR + Sony CXD2834ER. REV:A, P/N:G1410201T201.
+
+    [rykov] 2012-07-20 Registered.
+
+Batch HW_S231
+
+    Received from Kentec by rib on 2012-07-20.
+
+HW_S231_1
+
+    DVB-C board for TV-201 "REV:A P/N:G1410201C000". MXL241SF.
+
+    [rykov] 2012-07-20 Registered.
+    [rykov] 2012-07-26 Taken by rib.
+
+Batch HW_S232
+
+    Received from Kentec by rib on 2012-07-20.
+
+HW_S232_1
+
+    Dune HD TV-101W fully assembled. Wi-Fi with ext. antenna connector.
+
+    [rykov] 2012-07-20 Registered.
+
+Batch HW_S233
+
+    Received from HonKwang by rib on 2012-07-20.
+
+HW_S233_1
+
+    Tatung STB-4100 (with Intel media processor CE4100 series).
+    SN:13D00065T02. MAC: 00803F0DB9C5.
+
+    [rykov] 2012-07-20 Registered.
+
+HW_S233_1_1
+
+    USB flash drive 4GB Kingston DataTraveler.
+
+    [rykov] 2012-07-20 Registered.
+
+HW_S233_1_2
+
+    Remote control for the Tatung STB-4100.
+
+    [rykov] 2012-07-20 Registered.
+
+HW_S233_1_3
+
+    AC adapter for the Tatung STB-4100.
+
+    [rykov] 2012-07-20 Registered.
+..........................................................................
+
+Batch HW_S234
+
+    Received from Kentec.
+
+HW_S234_1
+
+    Dune HD TV-101 V2.1 fully assembled. Wi-Fi (RTL8188CUS)
+    with external antenna connector, no Z-Wave module. G1410152A003.
+    
+    [rykov] 2012-07-25 Registered.
+    [mike] 2012-07-30 Z-Wave chip does not work with the "spizwave" tool.
+    GPIO19 and GPIO20 (MISO and MOSI) do not work with the "fip_gpio" tool,
+    while on Vantage 8670 and HW_S234_2 they do work as GPIO.
+    [mike] 2012-07-31 Taken by rib to attempt zwave hw fixing.
+    TODO rib: Register hw changes (unmouonting zwave, bugs, etc).
+
+HW_S234_2
+
+    Dune HD TV-101 V2.1 fully assembled. Wi-Fi (Ralink)
+    with external antenna connector, no Z-Wave module. G1410152A003.
+    
+    [rykov] 2012-07-25 Registered.
+    [mike] 2012-07-30 Soldered Z-Wave chip; flashed zwave fw via the 
+    "spizwave" tool. NOTE: Z-Wave SPI Flash chip has already been there.
+    [rib] 2012-08-08 SPI Z-Wave connection fixed by wire.
+    [rib] 2012-08-10 Z-Wave chip antenna removed.
+    [rib] 2012-08-10 Z-Wave firmware upgraded to "Z-Stick 4.0" by Poltorak.
+
+Batch HW_S235
+
+HW_P235_1
+
+    Dune HD TV-101 V1.1 fully assembled. Wi-Fi (Ralink)
+    with external antenna connector, no Z-Wave module. G1410152A000.
+    
+    [rykov] 2012-07-25 Registered.
+    [rykov] 2012-07-25 In testing room.
+    [rykov] 2012-08-01 Z-Wave module removed, port damaged.
+
+HW_P235_2
+
+    Dune HD TV-101 V1.1 fully assembled. Wi-Fi (Ralink)
+    with external antenna connector, no Z-Wave module. G1410152A000.
+    
+    [rykov] 2012-07-25 Registered.
+    [rykov] 2012-07-25 In testing room.
+..........................................................................
+
+Batch HW_S236
+
+HW_I236_1
+
+    Dual CAM Viaccess. HHF21106011258.
+        
+    [rykov] 2012-08-01 Registered.
+
+HW_I236_2
+
+    Smart card NTV+ Viaccess. 032505727852.
+
+    [rykov] 2012-08-01 Registered.
+
+..........................................................................
+
+Batch HW_S237
+
+    Recieved0 via HK 2012-08-01.
+
+HW_S237_1
+
+    DVB-S Extension Board by JacTech. JS-346 v2.0 2012/06/17.
+    1 tuner, 1 CI slot. Shield on the tuner. 
+    Montage M88TS2022/M88088103. With plastic skirt for the USB connector.
+    
+    [rykov] 2012-08-02 Registered.
+
+HW_S237_2
+
+    DVB prototype board on Intel CPU CE 5315. Cocom s/n: A637.
+    
+    [rykov] 2012-08-02 Registered.
+
+
+HW_S237_5
+
+    Thatcher 257 developers platform in blue storage box.
+    PN: IPTV STB. Model No.: HS6020W. 6020W108312320018950F5EF9.
+
+    [rykov] 2012-08-02 Registered.
+
+HW_S237_5_1
+
+    Remote for Thatcher 257.
+
+    [rykov] 2012-08-02 Registered.
+
+HW_S237_5_2
+
+    AC power adaprer Ktec. 12V, 1.25A.
+
+HW_S238_1
+
+    Universal remote control madeforyou Elegant 4:1.
+
+    [rykov] 2012-08-06 Registered.
+
+HW_S238_2
+
+    Universal remote control madeforyou 4:1.
+
+    [rykov] 2012-08-06 Registered.
+
+HW_I239_1
+
+    Intel Mini-ITX MN525RI (rev. 1.0). With Intel® Atom™ processor D525
+    (1M Cache, 1.80 GHz, Dual Core, 13W), 4GB (2x2) DDR3 Samsung RAM.
+    Chipset Intel® 82801IR I/O Controller (ICH9R). Video Intel GMA3150.
+    S/N: 1128504132.
+
+HW_I239_1_1
+
+    IDE power adaptor for SSD (4x2 pins).
+
+    [rykov] 2012-08-06 Registered.
+
+HW_I239_1_2
+
+    SATA SSD BIWIN DOM 4GB. P/N: BWMS1HMSAX-004.
+    S/N: 123002101002. F/W: 120202.
+
+    [rykov] 2012-08-06 Registered.
+
+HW_S240_1
+
+    Cocom Churchill 150 1GB developers platform in blue storage box.
+    S/N: A173. MAC: 0015FD002969.
+
+    [rykov] 2012-08-06 Registered.
+    [rykov] 2012-08-06 Taken by dkv.
+
+HW_S240_1_1
+
+    Remote control for Churchill 150.
+
+    [rykov] 2012-08-06 Registered.
+
+HW_S240_1_2
+
+    AC/DC power adaprer CE123B0120V2000B. 12V, 2000mA.
+
+    [rykov] 2012-08-06 Registered.
+
+HW_S240_1_3
+
+    USB to TTL serial cable (3.3V) - 1.8m. TTL-232R-3V3. FTDI Chip.
+
+    [rykov] 2012-08-02 Registered.
+
+HW_S241_1
+
+    Cocom Thatcher 257 1GB developers platform in blue storage box.
+    S/N: A036. MAC: 0015FD002919.
+
+    [rykov] 2012-08-06 Registered.
+    [rykov] 2012-08-06 Taken by dkv.
+
+HW_S241_1_1
+
+    Remote control for Thatcher 257.
+
+    [rykov] 2012-08-06 Registered.
+
+HW_S241_1_2
+
+    AC power adaprer HK-HP-A1s2. 12V, 0-2.5A (set at 2.5A).
+
+HW_S241_1_3
+
+    USB to TTL serial cable (3.3V) - 1.8m. TTL-232R-3V3. FTDI Chip.
+
+    [rykov] 2012-08-02 Registered.
+
+HW_S241_1_3
+
+    Cocom collaterals DVD Churchill.
+
+    [rykov] 2012-08-06 Registered.
+
+..........................................................................
+
+Batch HW_C242
+
+    Received 2012-08-06.
+
+HW_C242_1
+
+    Apple iPad2 Wi-Fi 16GB Black. Part No. MC769RS/A. S/N: DN6HMRFTDFHW.
+    
+    [rykov] 2012-08-07 Registered.
+
+HW_C242_1_1
+
+    AC adaptor for Apple iPad2 over USB with EU plug.
+    
+    [rykov] 2012-08-07 Registered.
+
+..........................................................................
+
+Batch HW_S243
+
+    Received via HK 2012-08-01.
+
+HW_S243_1
+
+    Prototype board ATSC Maxlinear MxL-242 "0024" with MxL603 tuner board
+    plugged in.
+    
+    [rykov] 2012-08-08 Registered.
+
+HW_S243_2
+    
+    Prototype board ATSC decoder Panasonic MN88436-CB, No.34.
+
+    [rykov] 2012-08-08 Registered.
+
+..........................................................................
+
+Batch HW_S244
+
+    Received from Paris 2012-08-09.
+
+HW_S244_1
+
+    Vantage 8670 Sigma Design Inc. SMP8670 ADP developer board.
+    53-001031-01 Rev. E1.
+    SMP8670-PS1-CBE3, sequre media processor 1048.
+
+    [rykov] 2012-08-09 Registered.
+
+HW_S244_1_1
+
+    AC adaptor 12.0V, 3.33A, P/N:9NA0402111, S/N: H1121000501,
+    SPI P/N:AD040-DGAA1-J25, UPC CODE: 67780870010.
+
+    [rykov] 2012-08-09 Registered.
+..........................................................................
+
+Batch HW_C245
+
+    Bought by yurian 2012-07-10.
+
+    DVB-S2 receiver X3 HD PVR. S/N: OB1205A25-00459. Test device with smart
+    card reader DRECrypt + Viaccess + card sharing.
+
+    [rykov] 2012-08-09 Registered.
+    
+..........................................................................
+
+Batch HW_R246
+    
+    From Z-Wave kit.
+    Z-Wave evaluation module from Sigma Z-Wave kit.
+
+    [rib] 2012-08-10 Z-Wave firmware upgraded to "Z-Stick 4.0" by Poltorak.
+
+..........................................................................
+
+Batch HW_R247
+    
+    Brought by rib 2012-08-14.
+
+HW_R247_1
+    
+    Development board Panasonic DTV-FE I/F V3. "FE I/F NO.3".
+    Altera Cyclone (TM) III, EP3C25f256C8N, J CBEA51007A.
+
+    [rykov] 2012-08-15 Registered.
+    [mike] 2012-08-21 Given to dkv to be brought to TW.
+    
+...........................................................................
+
+Batch HW_I248
+    
+    Received from Poltorak 2012-08-21.
+
+HW_I248_1
+    
+    PLC-Ethernet adapter PowerGrid 9141.
+    Branded as "Comtrend". S/n 12023916492C.
+
+    [yurian] 2012-08-21 Registered.
+    [yurian] 2012-09-04 Taken to Poltorak for stand MGTS.
+
+HW_I248_2
+    
+    PLC-Ethernet adapter PowerGrid 9141.
+    Branded as "Comtrend". S/n 12023916499C.
+
+    [yurian] 2012-08-21 Registered.
+    [yurian] 2012-09-04 Taken to Poltorak for stand MGTS.
+    
+..........................................................................
+
+Batch HW_C249
+    
+    Bought by yurian 2012-08-21.
+
+HW_C249_1
+    
+    DVB-S/S2 USB tuner with CI Slot, AverMedia Aver3D Satellite TV.
+    S/n 00181AF09242.
+
+    [yurian] 2012-08-21 Registered.
+..........................................................................
+
+Batch HW_S250
+    
+    Find by rykov 2012-08-22.
+
+HW_S250_1
+    
+    Vantage 8910 developer board. Sigma Designs SMP8910-PS2-CBE3.
+    53-001039-01. Rev. E2. "107".
+
+    [rykov] 2012-08-22 Registered.
+
+HW_S250_1_1
+
+    AC adaptormodel No. FSP040-DGAA1. AC input 100-240V~, 1.3A, 50-60Hz.
+    DC output 12.0V=-- 3.33A max (40W max).
+
+    [rykov] 2012-08-22 Registered.
+
+NW_S250_1_2
+
+    UART Rev. E1 connector. FAB: 23-000812-01.
+
+    [rykov] 2012-08-22 Registered.
+
+HW_S250_1_3
+
+    Remote control Sigma Designs.
+
+    [rykov] 2012-08-22 Registered.
+
+HW_S250_2
+    
+    Vantage 8910 developer board. Sigma Designs SMP8910-PS2-CBE3.
+    53-001039-01. Rev. E2. "102".
+
+    [rykov] 2012-08-22 Registered.
+
+HW_S250_2_1
+
+    AC adaptormodel No. FSP040-DGAA1. AC input 100-240V~, 1.3A, 50-60Hz.
+    DC output 12.0V=-- 3.33A max (40W max).
+
+    [rykov] 2012-08-22 Registered.
+
+NW_S250_2_2
+
+    UART Rev. E1 connector. FAB: 23-000812-01.
+
+    [rykov] 2012-08-22 Registered.
+
+HW_S250_2_3
+
+    Remote control Sigma Designs.
+
+    [rykov] 2012-08-22 Registered.
+    
+..........................................................................
+
+Batch HW_S251
+    
+HW_S251_1
+
+    Z-Wave antenna brought by Poltorak.
+
+    [rykov] 2012-08-27 Registered.
+
+HW_S251_1_1
+
+    External modul for Z-Wave antenna.
+
+    [rykov] 2012-08-27 Registered.
+
+HW_S251_2
+
+    Wi-Fi antenna, PCB type, folded with black insulation tape, with 150 mm
+    wire and IPEX connector.
+    
+    [rykov] 2012-08-27 Registered.
+    
+..........................................................................
+
+Batch HW_S252
+    
+    Brought 2012-08-30 by dkv from TW.
+    
+HW_S252_1
+
+    Mainboard of Dune HD TV-101 V3.0. "G1410TV10100".
+    SMP8674, Wi-Fi with on-board F-antenna, no Z-Wave.
+    NOTE: As of 2012-08-30, the board does not turn on for yet 
+    unknown reason.
+    
+    [mike] 2012-08-30 Registered.
+
+HW_S252_2_1
+HW_S252_2_2
+
+    Full-size mainboard of Dune HD TV-201 REV:A. "P/N:G1410TV2010003".
+    SMP8671AD, Wi-Fi with IPEX connector (no antenna), Z-Wave module,
+    no Z-Wave EEPROM.
+    
+    [mike] 2012-08-30 Registered.
+
+HW_S252_3_1
+
+    Full-size DVB-C board for TV-201, MXL241SF, CI Slot with TDA8024TT,
+    Smart-card reader.
+
+    [mike] 2012-08-30 Registered.
+
+HW_S252_3_2
+
+    Full-size DVB-C board for TV-201, MXL241SF, no CI Slot, SATA,
+    Smart-card reader.
+    
+    [mike] 2012-08-30 Registered.
+    [mike] 2012-08-30 Taken to dkv as candidate for IFA.
+    
+HW_S252_4_1
+
+    Full-size DVB-C/T board for TV-201, Sony D2831WR + Sony D2817ER, 
+    CI Slot with TDA8024TT, Smart-card reader.
+    
+    [mike] 2012-08-30 Registered.
+
+HW_S252_4_2
+
+    Full-size DVB-C/T board for TV-201, Sony D2831WR + Sony D2817ER, 
+    no CI Slot, SATA, Smart-card reader.
+
+    [mike] 2012-08-30 Registered.
+
+HW_S252_5_1
+
+    Full-size ATSC board for TV-201, MN88436 + MXL603, 
+    no CI Slot, SATA, Smart-card reader. "P/N:G1310201SC01".
+
+    [mike] 2012-08-30 Registered.
+
+HW_S252_5_2
+
+    Full-size ATSC board for TV-201, MN88436 + MXL603, 
+    no CI Slot, SATA, Smart-card reader. "P/N:G1310201SC01".
+
+    [mike] 2012-08-30 Registered.
+    [mike] 2012-08-30 Taken to dkv as candidate for IFA.
+
+HW_S252_6_1
+
+    PSU for Dune HD Max 3D, 12V, 5 A, "MODEL NO: SU60-7120500-1C",
+    "DESIGN NO: SU60-71120-000S".
+
+    [mike] 2012-08-30 Registered.
+
+HW_S252_6_2
+
+    FIP for Dune HD Max 3D, V2.0, "HDI-MAX_INTEL-VFD", "P/N G1410VFD000".
+
+    [mike] 2012-08-30 Registered.
+
+..........................................................................
+    
+Batch HW_S253
+    
+HW_S253_1
+
+    Z-Wave antenna brought by Poltorak.
+
+    [yurian] 2012-09-03 Registered.
+    
+HW_S253_2
+
+    Z-Wave antenna brought by Poltorak.
+
+    [yurian] 2012-09-03 Registered.
+    
+HW_S253_3
+
+    Z-Wave antenna brought by Poltorak.
+
+    [yurian] 2012-09-03 Registered.
+    [yurian] 2012-09-04 Intended to be given to Poltorak for MGTS booth.
